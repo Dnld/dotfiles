@@ -7,26 +7,26 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "c5c8c6"
-let s:background = "1c1c1c"
-let s:selection = "373b41"
-let s:line = "282a2e"
-let s:comment = "969896"
-let s:red = "cc6666"
-let s:orange = "de935f"
-let s:yellow = "f0c674"
-let s:green = "b5bd68"
-let s:aqua = "8abeb7"
-let s:blue = "81a2be"
-let s:purple = "b294bb"
+let s:foreground = "AEAEAE"
+let s:background = "252525"
+let s:selection = "474c52"
+let s:line = "474c52"
+let s:comment = "68696b"
+let s:red = "d77c79"
+let s:orange = "df935f"
+let s:yellow = "f4cf87"
+let s:green = "c2c77b"
+let s:aqua = "9ac9c4"
+let s:blue = "92b2c9"
+let s:purple = "c0a7c7"
 let s:window = ""
 
 " Console 256 Colours
 if !has("gui_running")
 	let s:background = ""
-	let s:window = "4e4e4e"
-	let s:line = "3a3a3a"
-	let s:selection = "585858"
+	let s:window = ""
+	let s:line = "474c52"
+	let s:selection = "474c52"
 end
 
 hi clear
@@ -244,7 +244,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Vim Highlighting
 	call <SID>X("Normal", s:foreground, s:background, "")
-	call <SID>X("LineNr", s:selection, "", "")
+	call <SID>X("LineNr", s:comment, "", "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
 	call <SID>X("Search", s:background, s:yellow, "")
@@ -253,7 +253,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("StatusLine", s:window, s:background, "reverse")
 	call <SID>X("StatusLineNC", s:window, s:window, "reverse")
 	call <SID>X("VertSplit", s:window, s:background, "none")
-	call <SID>X("Visual", "", s:window, "")
+	call <SID>X("Visual", "", s:selection, "")
 	call <SID>X("Directory", s:blue, "", "")
 	call <SID>X("ModeMsg", s:green, "", "")
 	call <SID>X("MoreMsg", s:green, "", "")
@@ -274,7 +274,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	end
 
 	" Standard Highlighting
-	call <SID>X("Comment", s:selection, "", "")
+	call <SID>X("Comment", s:comment, "", "")
 	call <SID>X("Todo", s:comment, s:background, "")
 	call <SID>X("Title", s:comment, "", "")
 	call <SID>X("Identifier", s:red, "", "none")

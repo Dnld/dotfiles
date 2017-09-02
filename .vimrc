@@ -12,6 +12,7 @@ call vundle#begin()
 
 " plugins
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter' 
 Plugin 'itchyny/lightline.vim'
 Plugin 'vim-scripts/vim-auto-save'
@@ -91,14 +92,12 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 " syntax highlighting and theme
 syntax enable
 set t_Co=256
-colorscheme Monochrome
+source ~/.vim/colors/Tomorrow-Night.vim
 set background=dark 
 set guifont=Source\ Code\ Pro:h13
-highlight GitGutterAdd ctermfg=22
-highlight GitGutterChange ctermfg=130
-highlight GitGutterDelete ctermfg=88
-highlight GitGutterChangeDelete ctermfg=130
-
+if (has("termguicolors"))
+  set termguicolors
+endif
 " splitpace configuration 
 set splitbelow
 set splitright
