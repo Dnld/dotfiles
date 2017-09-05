@@ -14,10 +14,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter' 
-Plugin 'itchyny/lightline.vim'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'Shougo/neocomplete'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-syntastic/syntastic'
 
 " plugins must be added before this line 
 call vundle#end()            " required
@@ -25,30 +27,12 @@ filetype plugin indent on    " required
 
 " plugin settings
 
+" Airline
+let g:airline_powerline_fonts = 1
+
 " Autosave settings
 let g:auto_save = 1
 let g:auto_save_silent = 1
-
-" Lightline settings
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
-      \ }
 
 " Multiple-Cursors settings
 nnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
@@ -87,17 +71,16 @@ set noshowmode
 set mouse=a
 nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
-:hi SpellBad guibg=#ff2929 ctermbg=224
 
 " syntax highlighting and theme
 syntax enable
-set t_Co=256
-source ~/.vim/colors/Tomorrow-Night.vim
-set background=dark 
-set guifont=Source\ Code\ Pro:h13
 if (has("termguicolors"))
   set termguicolors
 endif
+source ~/.vim/colors/Tomorrow-Night-Eighties.vim
+set background=dark 
+set guifont=Source\ Code\ Pro:h13
+
 " splitpace configuration 
 set splitbelow
 set splitright
