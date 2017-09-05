@@ -2817,9 +2817,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 365 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>362 376 796 473 0 0 1440 878 </string>
+	<string>362 468 918 381 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 32 1410 809 0 0 1440 878 </string>
+	<string>777 411 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>15 219 1114 656 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2835,12 +2835,16 @@
 			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.14507558941841125</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.14510861039161682</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.14508152008056641</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -2912,13 +2916,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.33542913198471069</real>
+				<real>0.76949703693389893</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.33558571338653564</real>
+				<real>0.78985238075256348</real>
 				<key>Red Component</key>
-				<real>0.33057403564453125</real>
+				<real>0.60331845283508301</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -3005,12 +3009,16 @@
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.14507558941841125</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.14510861039161682</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.14508152008056641</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -3156,7 +3164,7 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.66670489311218262</real>
+				<real>0.66670501232147217</real>
 				<key>Red Component</key>
 				<real>0.66660702228546143</real>
 			</dict>
@@ -5439,7 +5447,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-01T23:05:36Z</date>
+	<date>2017-09-04T20:28:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -6402,7 +6410,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.8</string>
+	<string>3.1.beta.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

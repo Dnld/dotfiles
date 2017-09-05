@@ -19,12 +19,12 @@ let s:green = "c2c77b"
 let s:aqua = "9ac9c4"
 let s:blue = "92b2c9"
 let s:purple = "c0a7c7"
-let s:window = ""
+let s:window = "252525"
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = ""
-	let s:window = ""
+	let s:background = "252525"
+	let s:window = "252525"
 	let s:line = "474c52"
 	let s:selection = "474c52"
 end
