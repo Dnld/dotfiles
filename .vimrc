@@ -3,8 +3,8 @@
 " https://github.com/Dnld/devtools
 
 " Vundle
-set nocompatible          
-filetype off 
+set nocompatible
+filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -13,7 +13,7 @@ call vundle#begin()
 " plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter' 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'Shougo/neocomplete'
 Plugin 'terryma/vim-multiple-cursors'
@@ -21,7 +21,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 
-" plugins must be added before this line 
+" plugins must be added before this line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -78,10 +78,13 @@ if (has("termguicolors"))
   set termguicolors
 endif
 source ~/.vim/colors/Tomorrow-Night-Eighties.vim
-set background=dark 
+set background=dark
 set guifont=Source\ Code\ Pro:h13
+hi TabLineFill guifg=#393939 guibg=#393939
+hi TabLine guibg=#393939
+hi TabLineSel guibg=#2d2d2d
 
-" splitpace configuration 
+" splitpace configuration
 set splitbelow
 set splitright
 
@@ -99,16 +102,6 @@ map <leader><leader> :Explore<cr>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
-" disables arrow keys
-" nnoremap <Up> <NOP>
-" nnoremap <Down> <NOP>
-" nnoremap <Left> <NOP>
-" nnoremap <Right> <NOP>
-" inoremap <Up> <NOP>
-" inoremap <Down> <NOP>
-" inoremap <Left> <NOP>
-" inoremap <Right> <NOP>
-
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -120,17 +113,25 @@ endfunction"}}}
 
 " better pasting on a Mac
 if &term =~ "xterm.*"
-    let &t_ti = &t_ti . "\e[?2004h"
-    let &t_te = "\e[?2004l" . &t_te
-    function XTermPasteBegin(ret)
-        set pastetoggle=<Esc>[201~
-        set paste
-        return a:ret
-    endfunction
-    map <expr> <Esc>[200~ XTermPasteBegin("i")
-    imap <expr> <Esc>[200~ XTermPasteBegin("")
-    vmap <expr> <Esc>[200~ XTermPasteBegin("c")
-    cmap <Esc>[200~ <nop>
-    cmap <Esc>[201~ <nop>
+  let &t_ti = &t_ti . "\e[?2004h"
+  let &t_te = "\e[?2004l" . &t_te
+  function XTermPasteBegin(ret)
+    set pastetoggle=<Esc>[201~
+    set paste
+    return a:ret
+  endfunction
+  map <expr> <Esc>[200~ XTermPasteBegin("i")
+  imap <expr> <Esc>[200~ XTermPasteBegin("")
+  vmap <expr> <Esc>[200~ XTermPasteBegin("c")
+  cmap <Esc>[200~ <nop>
+  cmap <Esc>[201~ <nop>
 endif
+
+" trim all trailing whitespace
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+autocmd BufWritePre * :call TrimWhitespace()
 
