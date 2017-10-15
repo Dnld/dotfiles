@@ -58,7 +58,6 @@ endfunction"}}}
 
 " general settings
 inoremap jj <Esc>
-set ruler
 set number
 set laststatus=2
 set smartindent
@@ -77,12 +76,13 @@ syntax enable
 if (has("termguicolors"))
   set termguicolors
 endif
-source ~/.vim/colors/Tomorrow-Night-Eighties.vim
+source ~/.vim/colors/Tomorrow-Night.vim
+let g:airline_theme='bubblegum'
 set background=dark
 set guifont=Source\ Code\ Pro:h13
-hi TabLineFill guifg=#393939 guibg=#393939
-hi TabLine guibg=#393939
-hi TabLineSel guibg=#2d2d2d
+hi TabLineFill guifg=#393939
+hi TabLine guibg=#252526 guifg=#555555
+hi TabLineSel guifg=#AAAAAA guibg=#252525
 
 " splitpace configuration
 set splitbelow
@@ -98,7 +98,7 @@ vnoremap <C-K> :m '<-2<CR>gv=gv
 
 " explorer settings
 let mapleader=" "
-map <leader><leader> :Explore<cr>
+map <C-E> :Explore<cr>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 

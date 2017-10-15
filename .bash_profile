@@ -131,7 +131,8 @@ alias nde="nodemon"
 
 # Python shortcuts
 alias pss="python -m SimpleHTTPServer"
-alias py="python"
+alias py2="python"
+alias py3="python3"
 
 # Safari shortcuts
 alias saf="open -a safari"

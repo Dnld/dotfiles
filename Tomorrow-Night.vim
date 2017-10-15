@@ -1,6 +1,6 @@
 " Tomorrow Night - Full Colour and 256 Colour
 " http://chriskempson.com
-" 
+"
 " Modified by Donald Steinert
 " https://github.com/Dnld
 "
