@@ -19,6 +19,7 @@ Plugin 'Shougo/neocomplete'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'enricobacis/vim-airline-clock'
 Plugin 'vim-syntastic/syntastic'
 
 " plugins must be added before this line
@@ -29,6 +30,7 @@ filetype plugin indent on    " required
 
 " Airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#clock#format = '%H:%M'
 
 " Autosave settings
 let g:auto_save = 1
@@ -38,15 +40,15 @@ let g:auto_save_silent = 1
 nnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
 vnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
 function! Multiple_cursors_before()
-    exe 'NeoCompleteLock'
+  exe 'NeoCompleteLock'
 endfunction
 function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
+
 endfunction
 
 " enable neocomplete
 let g:neocomplete#enable_at_startup = 1
-
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :

@@ -2990,6 +2990,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 272.000000, NO, NO</string>
+		<string>0.000000, 273.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -3025,13 +3030,13 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>269 168 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 382 620 392 0 0 1440 900 </string>
+	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>409 60 796 473 0 0 1440 878 </string>
+	<string>159 203 918 381 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>292 174 1010 690 0 0 1440 878 </string>
+	<string>786 416 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>15 32 1282 826 0 0 1440 878 </string>
+	<string>15 406 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 64 1130 792 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -3739,13 +3744,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.31974983215332031</real>
+				<real>0.26663047075271606</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.29827862977981567</real>
+				<real>0.26668369770050049</real>
 				<key>Red Component</key>
-				<real>0.27954724431037903</real>
+				<real>0.26663997769355774</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -6463,7 +6468,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-05T02:55:31Z</date>
+	<date>2017-10-15T13:44:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -7444,7 +7449,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.10</string>
+	<string>3.1.4.beta.1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
