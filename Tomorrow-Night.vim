@@ -9,8 +9,8 @@
 " Default GUI Colours
 let s:foreground = "AAAAAA"
 let s:background = "252525"
-let s:selection = "474c52"
-let s:line = "474c52"
+let s:selection = "444444"
+let s:line = "444444"
 let s:comment = "555555"
 let s:red = "d77c79"
 let s:orange = "df935f"
@@ -25,8 +25,8 @@ let s:window = "252525"
 if !has("gui_running")
 	let s:background = "252525"
 	let s:window = "252525"
-	let s:line = "474c52"
-	let s:selection = "474c52"
+	let s:line = "444444"
+	let s:selection = "444444"
 end
 
 hi clear
