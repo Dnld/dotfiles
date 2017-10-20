@@ -40,12 +40,12 @@ let g:auto_save_in_insert_mode = 0
 " Multiple-Cursors settings
 nnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
 vnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
-function! Multiple_cursors_before()
+fun! Multiple_cursors_before()
   exe 'NeoCompleteLock'
-endfunction
+endfun
 function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
-endfunction
+endfun
 
 " enable Neocomplete
 let g:neocomplete#enable_at_startup = 1
@@ -102,20 +102,20 @@ let g:netrw_liststyle = 3
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ neocomplete#start_manual_complete()
-function! s:check_back_space() "{{{
+fun! s:check_back_space() "{{{
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
+endfun"}}}
 
 " better pasting on a Mac
 if &term =~ "xterm.*"
   let &t_ti = &t_ti . "\e[?2004h"
   let &t_te = "\e[?2004l" . &t_te
-  function XTermPasteBegin(ret)
+  fun XTermPasteBegin(ret)
     set pastetoggle=<Esc>[201~
     set paste
     return a:ret
-  endfunction
+  endfun
   map <expr> <Esc>[200~ XTermPasteBegin("i")
   imap <expr> <Esc>[200~ XTermPasteBegin("")
   vmap <expr> <Esc>[200~ XTermPasteBegin("c")
