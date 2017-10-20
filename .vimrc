@@ -1,6 +1,6 @@
 " Donald Steinert
-" updated August 1, 2017
-" https://github.com/Dnld/devtools
+" updated October 20, 2017
+" https://github.com/Dnld/dotfiles
 
 " Vundle
 set nocompatible
@@ -45,19 +45,10 @@ function! Multiple_cursors_before()
 endfunction
 function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
-
 endfunction
 
-" enable neocomplete
+" enable Neocomplete
 let g:neocomplete#enable_at_startup = 1
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ neocomplete#start_manual_complete()
-function! s:check_back_space() "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
 
 " general settings
 inoremap jj <Esc>
@@ -66,9 +57,9 @@ set tabstop=2
 set shiftwidth=2
 set smartindent
 set autoindent
+set cindent
 set smarttab
 set expandtab
-set cindent
 set hlsearch!
 set nowrap
 set noshowmode
@@ -93,7 +84,7 @@ hi TabLineSel guifg=#AAAAAA guibg=#252525
 set splitbelow
 set splitright
 
-" move line up or down
+" move line or selection up or down
 nnoremap <C-J> :m .+1<CR>==
 nnoremap <C-K> :m .-2<CR>==
 inoremap <C-J> <Esc>:m .+1<CR>==gi
@@ -107,7 +98,7 @@ map <C-E> :Explore<cr>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
-" <TAB>: completion.
+" tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ neocomplete#start_manual_complete()
@@ -132,7 +123,7 @@ if &term =~ "xterm.*"
   cmap <Esc>[201~ <nop>
 endif
 
-" trim all trailing whitespace
+" trim all trailing whitespace (when exiting insert mode)
 fun! TrimWhitespace()
   let l:save = winsaveview()
   %s/\s\+$//e

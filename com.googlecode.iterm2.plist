@@ -18,6 +18,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -3032,11 +3034,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>159 203 918 381 0 0 1440 878 </string>
+	<string>159 276 918 381 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>786 416 650 452 0 0 1440 878 </string>
+	<string>783 414 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>15 406 650 452 0 0 1440 878 </string>
+	<string>15 49 1106 809 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 64 1130 792 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -6468,7 +6470,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-15T13:44:32Z</date>
+	<date>2017-10-18T01:30:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -7322,6 +7324,8 @@
 													<string>\btelnet:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\b</string>
 												</dict>
 											</array>
+											<key>Space</key>
+											<integer>0</integer>
 											<key>Sync Title</key>
 											<false/>
 											<key>Tags</key>
@@ -7432,9 +7436,9 @@
 				<key>Window Type</key>
 				<integer>0</integer>
 				<key>X Origin</key>
-				<real>780</real>
+				<real>779</real>
 				<key>Y Origin</key>
-				<real>412</real>
+				<real>414</real>
 			</dict>
 		</array>
 	</dict>
