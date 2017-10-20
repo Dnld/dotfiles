@@ -35,6 +35,7 @@ let g:airline#extensions#clock#format = '%H:%M'
 " Autosave settings
 let g:auto_save = 1
 let g:auto_save_silent = 1
+let g:auto_save_in_insert_mode = 0
 
 " Multiple-Cursors settings
 nnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
@@ -61,11 +62,13 @@ endfunction"}}}
 " general settings
 inoremap jj <Esc>
 set number
-set laststatus=2
-set smartindent
-set smarttab
-set autoindent
+set tabstop=2
 set shiftwidth=2
+set smartindent
+set autoindent
+set smarttab
+set expandtab
+set cindent
 set hlsearch!
 set nowrap
 set noshowmode
