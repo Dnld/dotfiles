@@ -1,4 +1,5 @@
-" updated October 35, 2017
+" Donald Steinert
+" updated October 28, 2017
 " https://github.com/Dnld/dotfiles
 
 " Vundle
@@ -9,18 +10,17 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'Shougo/neocomplete'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'enricobacis/vim-airline-clock'
 Plugin 'vim-syntastic/syntastic'
 
-" plugins
-" Donald Steinert
 " plugins must be added before this line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,7 +52,6 @@ inoremap jj <Esc>
 inoremap <leader>9 <Esc>
 vnoremap <leader>9 <Esc>
 map <C-T> :tabnew<cr>
-map <C-A> :vsplit<cr>
 set number
 set tabstop=2
 set shiftwidth=2
@@ -82,6 +81,7 @@ hi TabLine guibg=#252526 guifg=#555555
 hi TabLineSel guifg=#AAAAAA guibg=#252525
 
 " splitpace configuration
+map <C-A> :vsplit<cr>
 set splitbelow
 set splitright
 
