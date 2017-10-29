@@ -3034,9 +3034,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>159 237 1016 512 0 0 1440 900 </string>
+	<string>159 212 918 381 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>376 123 1050 741 0 0 1440 900 </string>
+	<string>782 415 650 452 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>15 406 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -3299,13 +3299,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.66658550500869751</real>
+				<real>0.72932356595993042</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.66670489311218262</real>
+				<real>0.72945338487625122</real>
 				<key>Red Component</key>
-				<real>0.66660702228546143</real>
+				<real>0.72934693098068237</real>
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
@@ -3377,13 +3377,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.66658550500869751</real>
+				<real>0.72932249307632446</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.66670501232147217</real>
+				<real>0.72946292161941528</real>
 				<key>Red Component</key>
-				<real>0.66660702228546143</real>
+				<real>0.72933882474899292</real>
 			</dict>
 			<key>Guid</key>
 			<string>8DDC9F3B-A987-4979-8229-67F45F6F770E</string>
@@ -3733,13 +3733,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.66658550500869751</real>
+				<real>0.72932356595993042</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.66670489311218262</real>
+				<real>0.72945338487625122</real>
 				<key>Red Component</key>
-				<real>0.66660702228546143</real>
+				<real>0.72934693098068237</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
@@ -7221,11 +7221,11 @@
 											<key>Normal Font</key>
 											<string>SourceCodePro-Medium 13</string>
 											<key>Option Key Sends</key>
-											<integer>0</integer>
+											<integer>2</integer>
 											<key>Prompt Before Closing 2</key>
 											<integer>0</integer>
 											<key>Right Option Key Sends</key>
-											<integer>0</integer>
+											<integer>2</integer>
 											<key>Rows</key>
 											<integer>25</integer>
 											<key>Screen</key>
@@ -7430,7 +7430,7 @@
 										<key>Session Default Name</key>
 										<string>Tomorrow Night</string>
 										<key>Session GUID</key>
-										<string>A8A21724-AF15-44B1-A29A-C2B07A6CEBFA</string>
+										<string>FE8F9C8C-0ED1-4C6E-985C-3B909FB9B7AD</string>
 										<key>Session Name</key>
 										<string>Tomorrow Night</string>
 										<key>Session Window Title</key>
@@ -7476,7 +7476,7 @@
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
-				<string>pty-B946E215-EFD3-4601-8658-0AE6D226B256</string>
+				<string>pty-DD6A5966-8992-4B92-93FD-9E76710AACA4</string>
 				<key>Width</key>
 				<real>650</real>
 				<key>Window Type</key>
