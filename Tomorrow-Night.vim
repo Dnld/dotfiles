@@ -7,7 +7,7 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "AAAAAA"
+let s:foreground = "BABABA"
 let s:background = "252525"
 let s:selection = "444444"
 let s:line = "444444"
