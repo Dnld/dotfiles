@@ -1,5 +1,4 @@
-" Donald Steinert
-" updated October 20, 2017
+" updated October 35, 2017
 " https://github.com/Dnld/dotfiles
 
 " Vundle
@@ -10,18 +9,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'Shougo/neocomplete'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
 Plugin 'enricobacis/vim-airline-clock'
 Plugin 'vim-syntastic/syntastic'
 
+" plugins
+" Donald Steinert
 " plugins must be added before this line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -37,21 +36,23 @@ let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_in_insert_mode = 0
 
-" Multiple-Cursors settings
-nnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
-vnoremap <silent> m :MultipleCursorsFind <C-R>/<CR>
-fun! Multiple_cursors_before()
-  exe 'NeoCompleteLock'
-endfun
-function! Multiple_cursors_after()
-    exe 'NeoCompleteUnlock'
-endfun
-
-" enable Neocomplete
+" enable Neocomplete and tab completion
 let g:neocomplete#enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ neocomplete#start_manual_complete()
+fun! s:check_back_space() "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfun"}}}
 
 " general settings
+let mapleader="9"
 inoremap jj <Esc>
+inoremap <leader>9 <Esc>
+vnoremap <leader>9 <Esc>
+map <C-T> :tabnew<cr>
+map <C-A> :vsplit<cr>
 set number
 set tabstop=2
 set shiftwidth=2
@@ -85,27 +86,17 @@ set splitbelow
 set splitright
 
 " move line or selection up or down
-nnoremap <C-J> :m .+1<CR>==
-nnoremap <C-K> :m .-2<CR>==
-inoremap <C-J> <Esc>:m .+1<CR>==gi
-inoremap <C-K> <Esc>:m .-2<CR>==gi
-nnoremap <C-J> :m '>+1<CR>gv=gv
-vnoremap <C-K> :m '<-2<CR>gv=gv
+nnoremap <C-k> :m .-2<CR>==
+nnoremap <C-j> :m .+1<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " explorer settings
-let mapleader=" "
 map <C-E> :Explore<cr>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-
-" tab completion
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ neocomplete#start_manual_complete()
-fun! s:check_back_space() "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfun"}}}
 
 " better pasting on a Mac
 if &term =~ "xterm.*"
