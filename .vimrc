@@ -17,7 +17,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/vim-auto-save'
 Plugin 'Shougo/neocomplete'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'enricobacis/vim-airline-clock'
 Plugin 'vim-syntastic/syntastic'
 
@@ -35,6 +34,9 @@ let g:airline#extensions#clock#format = '%H:%M'
 let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_in_insert_mode = 0
+
+" prevent excessive cpu usage by Git Gutter
+let g:gitgutter_async=0
 
 " enable Neocomplete and tab completion
 let g:neocomplete#enable_at_startup = 1
@@ -72,13 +74,13 @@ syntax enable
 if (has("termguicolors"))
   set termguicolors
 endif
-source ~/.vim/colors/Tomorrow-Night.vim
-let g:airline_theme='bubblegum'
 set background=dark
 set guifont=Source\ Code\ Pro:h13
-hi TabLineFill guifg=#393939
-hi TabLine guibg=#252526 guifg=#555555
-hi TabLineSel guifg=#AAAAAA guibg=#252525
+source ~/.vim/colors/Charcoal.vim
+let g:airline_theme='airlinecharcoal'
+hi TabLineFill guifg=#3E4044
+hi TabLine guibg=#2B2C2F guifg=#3E4044
+hi TabLineSel guifg=#CACECE guibg=#2B2C2F
 
 " splitpace configuration
 map <C-A> :vsplit<cr>
