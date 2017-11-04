@@ -2974,14 +2974,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>1</string>
-	<key>NSColorPickerPreferredRGBEntryMode</key>
-	<integer>2</integer>
-	<key>NSColorPickerSlidersDefaults</key>
-	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads/tomorrow-theme/iTerm2</string>
+	<string>~/Dropbox/development/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -2992,11 +2986,6 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
-	<array>
-		<string>0.000000, 0.000000, 224.000000, 272.000000, NO, NO</string>
-		<string>0.000000, 273.000000, 224.000000, 43.000000, NO, NO</string>
-	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -3004,7 +2993,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -3025,22 +3014,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>652 375 224 253 0 0 1440 900 </string>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>514 266 445 77 0 0 1440 900 </string>
-	<key>NSWindow Frame Preferences</key>
-	<string>269 168 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 381 620 392 0 0 1440 900 </string>
+	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>438 445 918 381 0 0 1440 900 </string>
+	<string>269 103 918 492 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>782 415 650 452 0 0 1440 878 </string>
+	<string>330 412 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>15 406 650 452 0 0 1440 878 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 64 1130 792 0 0 1440 878 </string>
+	<string>176 71 570 352 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6393,15 +6374,13 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>7E45D9A2-030C-4D30-9E79-8AA098B9F72E</string>
+	<string>82B473C9-0F42-45BA-9448-879F4FDE4765</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>525562547.056512</real>
+	<real>531505799.66143101</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -6466,11 +6445,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=37</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=95</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-29T00:53:12Z</date>
+	<date>2017-11-04T16:30:31Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -6529,7 +6508,7 @@
 				<key>Hide After Opening</key>
 				<false/>
 				<key>Hiding Toolbelt Should Resize Window</key>
-				<false/>
+				<true/>
 				<key>Is Hotkey Window</key>
 				<false/>
 				<key>Saved Window Type</key>
@@ -7451,7 +7430,7 @@
 										<key>Session Default Name</key>
 										<string>Charcoal</string>
 										<key>Session GUID</key>
-										<string>73536236-2364-44E0-A740-67CC97975C53</string>
+										<string>C3339712-D831-4AE6-966F-E2B14A3DDF1C</string>
 										<key>Session Name</key>
 										<string>Charcoal</string>
 										<key>Session Window Title</key>
@@ -7497,15 +7476,15 @@
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
-				<string>pty-3BBFC6A7-C826-4AAA-BBFD-9B7D44029FE5</string>
+				<string>pty-17464BD4-17A7-4F2A-88D1-58DC07DCBAC3</string>
 				<key>Width</key>
 				<real>650</real>
 				<key>Window Type</key>
 				<integer>0</integer>
 				<key>X Origin</key>
-				<real>782</real>
+				<real>778</real>
 				<key>Y Origin</key>
-				<real>415</real>
+				<real>412</real>
 			</dict>
 		</array>
 	</dict>
@@ -7520,7 +7499,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.4.beta.1</string>
+	<string>3.1.5.beta.1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
