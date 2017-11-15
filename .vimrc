@@ -76,11 +76,11 @@ if (has("termguicolors"))
 endif
 set background=dark
 set guifont=Source\ Code\ Pro:h13
-source ~/.vim/colors/Charcoal.vim
+source ~/.vim/colors/Tomorrow-Night.vim
 let g:airline_theme='airlinecharcoal'
-hi TabLineFill guifg=#3E4044
-hi TabLine guibg=#2B2C2F guifg=#3E4044
-hi TabLineSel guifg=#CACECE guibg=#2B2C2F
+hi TabLineFill guifg=#252525
+hi TabLine guibg=#252525 guifg=#555555
+hi TabLineSel guifg=#BABABA guibg=#252525
 
 " splitpace configuration
 map <C-A> :vsplit<cr>

@@ -2974,6 +2974,12 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>1</string>
+	<key>NSColorPickerPreferredRGBEntryMode</key>
+	<integer>2</integer>
+	<key>NSColorPickerSlidersDefaults</key>
+	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Dropbox/development/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -2986,6 +2992,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 228.000000, 299.000000, NO, NO</string>
+		<string>0.000000, 300.000000, 228.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -3014,12 +3025,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>185 285 228 280 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 103 918 492 0 0 1440 878 </string>
+	<string>270 344 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>330 412 650 452 0 0 1440 878 </string>
+	<string>370 412 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 71 570 352 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -4898,13 +4911,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.33114415407180786</real>
+				<real>0.40392154455184937</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.27702754735946655</real>
+				<real>0.37254896759986877</real>
 				<key>Red Component</key>
-				<real>0.89593487977981567</real>
+				<real>0.92549020051956177</real>
 			</dict>
 			<key>Automatically Log</key>
 			<false/>
@@ -4955,13 +4968,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.8079717755317688</real>
+				<real>0.80789715051651001</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.80836361646652222</real>
+				<real>0.80820649862289429</real>
 				<key>Red Component</key>
-				<real>0.79357987642288208</real>
+				<real>0.7983168363571167</real>
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
@@ -5033,13 +5046,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.80784313725490198</real>
+				<real>0.80784314870834351</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.80784313725490198</real>
+				<real>0.80784314870834351</real>
 				<key>Red Component</key>
-				<real>0.792156862745098</real>
+				<real>0.79607844352722168</real>
 			</dict>
 			<key>Guid</key>
 			<string>9FB15611-584A-4DDC-8580-13AD1F0C6CDD</string>
@@ -5389,13 +5402,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.8079717755317688</real>
+				<real>0.80789715051651001</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.80836361646652222</real>
+				<real>0.80820649862289429</real>
 				<key>Red Component</key>
-				<real>0.79357987642288208</real>
+				<real>0.7983168363571167</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
