@@ -1,11 +1,10 @@
-" Donald Steinert
+
 " updated October 28, 2017
 " https://github.com/Dnld/dotfiles
 
 " Vundle
 set nocompatible
 filetype off
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -19,6 +18,7 @@ Plugin 'Shougo/neocomplete'
 Plugin 'vim-airline/vim-airline'
 Plugin 'enricobacis/vim-airline-clock'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'fatih/vim-go'
 
 " plugins must be added before this line
 call vundle#end()            " required
@@ -75,12 +75,12 @@ if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-set guifont=Source\ Code\ Pro:h13
-source ~/.vim/colors/Tomorrow-Night.vim
+set guifont=Source\ Code\ Pro:h14
+source ~/.vim/colors/Charcoal.vim
 let g:airline_theme='airlinecharcoal'
-hi TabLineFill guifg=#252525
-hi TabLine guibg=#252525 guifg=#555555
-hi TabLineSel guifg=#BABABA guibg=#252525
+hi TabLineFill guifg=#2B2C2F
+hi TabLine guibg=#2B2C2F guifg=#3E4044
+hi TabLineSel guifg=#CACECE guibg=#2B2C2F
 
 " splitpace configuration
 map <C-A> :vsplit<cr>
