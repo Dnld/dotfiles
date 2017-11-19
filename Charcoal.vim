@@ -3,19 +3,19 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "CACECE"
+let s:foreground = "CCCECE"
 let s:background = "2B2C2F"
 let s:selection = "3E4044"
 let s:line = "3E4044"
 let s:comment = "4D5051"
-let s:red = "E44754"
+let s:red = "EC5F67"
 let s:orange = "F99158"
 let s:yellow = "FAC864"
 let s:green = "99C794"
 let s:aqua = "5FB3B3"
 let s:blue = "6699CC"
 let s:purple = "C594C5"
-let s:window = "C594C5"
+let s:window = "2B2C2F"
 
 " Console 256 Colours
 if !has("gui_running")
