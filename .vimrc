@@ -1,5 +1,5 @@
-
-" updated October 28, 2017
+" Donald Steinert .vimrc
+" updated November 26, 2017
 " https://github.com/Dnld/dotfiles
 
 " Vundle
@@ -50,6 +50,7 @@ endfun"}}}
 
 " general settings
 let mapleader="9"
+set formatoptions=tcroql
 inoremap jj <Esc>
 inoremap <leader>9 <Esc>
 vnoremap <leader>9 <Esc>
@@ -63,6 +64,9 @@ set cindent
 set smarttab
 set expandtab
 set hlsearch!
+set incsearch
+set ignorecase
+set smartcase
 set nowrap
 set noshowmode
 set mouse=a
