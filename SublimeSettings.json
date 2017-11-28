@@ -4,7 +4,7 @@
 	"auto_complete_delay": 50,
 	"caret_style": "blink",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/Monochrome.tmTheme",
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
 	"draw_white_space": "none",
 	"find_selected_text": true,
 	"font_face": "Source Code Pro",
@@ -18,7 +18,7 @@
 	[
 		"draw_normal"
 	],
-	"line_padding_bottom": 1.0,
+	"line_padding_bottom": 2.0,
 	"match_brackets_angle": true,
 	"open_files_in_new_window": false,
 	"save_on_focus_lost": true,
