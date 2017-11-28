@@ -3,26 +3,26 @@
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "A9A9A9"
+let s:foreground = "9B9B9B"
 let s:background = "262626"
-let s:selection = "3a3a3a"
-let s:line = "3a3a3a"
-let s:comment = "4e4e4e"
-let s:red = "9e9e9e"
-let s:orange = "9e9e9e"
-let s:yellow = "9e9e9e"
-let s:green = "9e9e9e"
-let s:aqua = "9e9e9e"
-let s:blue = "9e9e9e"
-let s:purple = "9e9e9e"
-let s:window = "4e4e4e"
+let s:selection = "393939"
+let s:line = "393939"
+let s:comment = "515151"
+let s:red = "9B9B9B"
+let s:orange = "9B9B9B"
+let s:yellow = "9B9B9B"
+let s:green = "9B9B9B"
+let s:aqua = "9B9B9B"
+let s:blue = "9B9B9B"
+let s:purple = "9B9B9B"
+let s:window = "515151"
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = "303030"
-	let s:window = "4e4e4e"
-	let s:line = "3a3a3a"
-	let s:selection = "585858"
+	let s:background = "262626"
+	let s:window = "262626"
+	let s:line = "393939"
+	let s:selection = "393939"
 end
 
 hi clear
