@@ -3028,17 +3028,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>844 524 228 232 0 0 1440 878 </string>
+	<string>844 488 228 232 0 0 1440 878 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 33 445 77 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>460 136 918 512 0 0 1440 878 </string>
+	<string>460 189 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>777 412 650 452 0 0 1440 900 </string>
+	<string>777 393 650 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>176 0 650 477 0 0 1440 900 </string>
+	<string>176 17 650 452 0 0 1440 878 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>197 48 650 452 0 0 1440 878 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutMeta_selection</key>
@@ -3057,13 +3059,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14507558941841125</real>
+				<real>0.3411764705882353</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14510861039161682</real>
+				<real>0.33333333333333331</real>
 				<key>Red Component</key>
-				<real>0.14508152008056641</real>
+				<real>0.33333333333333331</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -3261,13 +3263,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14495822787284851</real>
+				<real>0.18431372549019609</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14499402046203613</real>
+				<real>0.17254901960784313</real>
 				<key>Red Component</key>
-				<real>0.14496240019798279</real>
+				<real>0.16862745098039217</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -3748,13 +3750,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.26398807764053345</real>
+				<real>0.26274511218070984</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.25107407569885254</real>
+				<real>0.25098040699958801</real>
 				<key>Red Component</key>
-				<real>0.24179229140281677</real>
+				<real>0.24313725531101227</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -7324,7 +7326,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-04T00:44:43Z</date>
+	<date>2017-12-08T00:54:20Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

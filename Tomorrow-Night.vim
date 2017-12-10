@@ -1,17 +1,18 @@
 " Tomorrow Night - Full Colour and 256 Colour
 " http://chriskempson.com
 "
-" Modified by Donald Steinert
-" https://github.com/Dnld
-"
 " Hex colour conversion functions borrowed from the theme "Desert256""
+"
+" Modified by Donald Steinert
+" https://github.com/Dnld/dotfiles
+" Updated December 9, 2017
 
 " Default GUI Colours
 let s:foreground = "BABABA"
-let s:background = "252525"
-let s:selection = "444444"
-let s:line = "444444"
-let s:comment = "555555"
+let s:background = "2B2C2F"
+let s:selection = "3E4043"
+let s:line = "3E4043"
+let s:comment = "555557"
 let s:red = "d77c79"
 let s:orange = "df935f"
 let s:yellow = "f4cf87"
@@ -23,10 +24,10 @@ let s:window = "252525"
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = "252525"
-	let s:window = "252525"
-	let s:line = "444444"
-	let s:selection = "444444"
+	let s:background = "2B2C2F"
+	let s:window = "2B2C2F"
+	let s:line = "3E4043"
+	let s:selection = "3E4043"
 end
 
 hi clear

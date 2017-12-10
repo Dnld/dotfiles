@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
-" updated November 26, 2017
 " https://github.com/Dnld/dotfiles
+" Updated December 9, 2017
 
 " Vundle
 set nocompatible
@@ -81,10 +81,10 @@ endif
 set background=dark
 set guifont=Source\ Code\ Pro:h13
 source ~/.vim/colors/Tomorrow-Night.vim
-let g:airline_theme='airlinecharcoal'
-hi TabLineFill guifg=#252525
-hi TabLine guibg=#252525 guifg=#555555
-hi TabLineSel guifg=#BABABA guibg=#252525
+let g:airline_theme='adaptive'
+hi TabLineFill guifg=#2B2C2F
+hi TabLine guibg=#555557 guifg=#2B2C2F
+hi TabLineSel guifg=#BABABA guibg=#2B2C2F
 
 " splitpace configuration
 map <C-A> :vsplit<cr>
