@@ -4,30 +4,36 @@
 	"auto_complete_delay": 50,
 	"caret_style": "blink",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/Monochrome.tmTheme",
+	"color_scheme": "Packages/Charcoal/Charcoal.tmTheme",
 	"draw_white_space": "none",
+	"el_capitan_font_san_francisco": false,
 	"find_selected_text": true,
 	"font_face": "Source Code Pro",
 	"font_options": "subpixel_antialias",
 	"font_size": 13.0,
 	"ignored_packages":
 	[
+		"JavaScript",
 		"Vintage"
 	],
 	"indent_guide_options":
 	[
 		"draw_normal"
 	],
-	"line_padding_bottom": 2.0,
+	"line_padding_bottom": 2,
 	"match_brackets_angle": true,
 	"open_files_in_new_window": false,
 	"save_on_focus_lost": true,
+	"scroll_speed": 0.7,
+	"show_definitions": false,
 	"spell_check": true,
 	"tab_size": 2,
 	"theme": "El Capitan.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_automatic_white_space": true,
-	"trim_trailing_white_space_on_save": true,
+	"trim_automatic_white_space": false,
+	"trim_trailing_white_space_on_save": false,
 	"wide_caret": true,
-	"word_wrap": "false"
+	"word_wrap": "false",
+	"wrap_width": 0
 }
+
