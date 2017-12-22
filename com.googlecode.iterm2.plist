@@ -3017,15 +3017,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>1222 299 228 249 0 0 1680 1028 </string>
+	<string>1222 263 228 249 0 0 1680 1028 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>137 37 445 77 0 0 1680 1028 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 545 606 456 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>509 254 1162 762 0 0 1680 1028 </string>
+	<string>1022 566 650 452 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>535 244 1138 775 0 0 1680 1028 </string>
+	<string>590 346 1082 673 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>555 205 1106 809 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -3262,13 +3262,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.18431372549019609</real>
+				<real>0.13867813348770142</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.17254901960784313</real>
+				<real>0.12891876697540283</real>
 				<key>Red Component</key>
-				<real>0.16862745098039217</real>
+				<real>0.12631300091743469</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -6599,13 +6599,13 @@
 												<key>Alpha Component</key>
 												<real>1</real>
 												<key>Blue Component</key>
-												<real>0.14507558941841125</real>
+												<real>0.67347264289855957</real>
 												<key>Color Space</key>
-												<string>sRGB</string>
+												<string>Calibrated</string>
 												<key>Green Component</key>
-												<real>0.14510861039161682</real>
+												<real>0.67362350225448608</real>
 												<key>Red Component</key>
-												<real>0.14508152008056641</real>
+												<real>0.67349427938461304</real>
 											</dict>
 											<key>Ansi 1 Color</key>
 											<dict>
@@ -6773,13 +6773,13 @@
 												<key>Alpha Component</key>
 												<real>1</real>
 												<key>Blue Component</key>
-												<real>0.14507558941841125</real>
+												<real>0.67347264289855957</real>
 												<key>Color Space</key>
-												<string>sRGB</string>
+												<string>Calibrated</string>
 												<key>Green Component</key>
-												<real>0.14510861039161682</real>
+												<real>0.67362350225448608</real>
 												<key>Red Component</key>
-												<real>0.14508152008056641</real>
+												<real>0.67349427938461304</real>
 											</dict>
 											<key>Ansi 9 Color</key>
 											<dict>
@@ -6803,13 +6803,13 @@
 												<key>Alpha Component</key>
 												<real>1</real>
 												<key>Blue Component</key>
-												<real>0.14495822787284851</real>
+												<real>0.13867813348770142</real>
 												<key>Color Space</key>
-												<string>sRGB</string>
+												<string>Calibrated</string>
 												<key>Green Component</key>
-												<real>0.14499402046203613</real>
+												<real>0.12891876697540283</real>
 												<key>Red Component</key>
-												<real>0.14496240019798279</real>
+												<real>0.12631300091743469</real>
 											</dict>
 											<key>Background Image Is Tiled</key>
 											<false/>
@@ -7290,13 +7290,13 @@
 												<key>Alpha Component</key>
 												<real>1</real>
 												<key>Blue Component</key>
-												<real>0.26398807764053345</real>
+												<real>0.26274511218070984</real>
 												<key>Color Space</key>
 												<string>sRGB</string>
 												<key>Green Component</key>
-												<real>0.25107407569885254</real>
+												<real>0.25098040699958801</real>
 												<key>Red Component</key>
-												<real>0.24179229140281677</real>
+												<real>0.24313725531101227</real>
 											</dict>
 											<key>Semantic History</key>
 											<dict>
@@ -7463,10 +7463,12 @@
 										</dict>
 										<key>Rows</key>
 										<integer>25</integer>
+										<key>Server PID</key>
+										<integer>71994</integer>
 										<key>Session Default Name</key>
 										<string>Tomorrow Night</string>
 										<key>Session GUID</key>
-										<string>BAC186F1-70DA-4172-A6AC-3E356051E94B</string>
+										<string>F081044A-DC73-4C7C-AB62-B62DF6062734</string>
 										<key>Session Name</key>
 										<string>Tomorrow Night</string>
 										<key>Session Window Title</key>
@@ -7475,6 +7477,8 @@
 										<false/>
 										<key>Substitutions</key>
 										<dict/>
+										<key>TTY</key>
+										<string>/dev/ttys001</string>
 										<key>Working Directory</key>
 										<string>/Users/djs</string>
 									</dict>
@@ -7512,15 +7516,15 @@
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
-				<string>pty-FFBB0BBC-482B-4C76-A0F4-AF36D500026A</string>
+				<string>pty-568F27C2-3D5B-4051-87BF-4488D8F16BAC</string>
 				<key>Width</key>
 				<real>650</real>
 				<key>Window Type</key>
 				<integer>0</integer>
 				<key>X Origin</key>
-				<real>777</real>
+				<real>1022</real>
 				<key>Y Origin</key>
-				<real>412</real>
+				<real>566</real>
 			</dict>
 		</array>
 		<key>default</key>
