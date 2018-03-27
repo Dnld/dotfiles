@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated December 9, 2017
+" Updated March 26, 2018
 
 " Vundle
 set nocompatible
@@ -18,7 +18,8 @@ Plugin 'Shougo/neocomplete'
 Plugin 'vim-airline/vim-airline'
 Plugin 'enricobacis/vim-airline-clock'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'fatih/vim-go'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 " plugins must be added before this line
 call vundle#end()            " required
@@ -48,13 +49,19 @@ fun! s:check_back_space() "{{{
   return !col || getline('.')[col - 1]  =~ '\s'
 endfun"}}}
 
+" NERDComToggleComment shortcut and configuration
+nnoremap 7 :call NERDComment(0,"toggle")<CR>
+vnoremap 7 :call NERDComment(0,"toggle")<CR>
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDDefaultAlign = 'left'
+
 " general settings
-let mapleader="9"
 set formatoptions=tcroql
 inoremap jj <Esc>
+let mapleader="9"
 inoremap <leader>9 <Esc>
 vnoremap <leader>9 <Esc>
-map <C-T> :tabnew<cr>
 set number
 set tabstop=2
 set shiftwidth=2
@@ -69,9 +76,17 @@ set ignorecase
 set smartcase
 set nowrap
 set noshowmode
+set splitbelow
+set splitright
 set mouse=a
 nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
+nnoremap 1 :Explore<cr>
+nnoremap 2 :CtrlP<cr>
+nnoremap 3 :buffers<cr>
+nnoremap 4 :tabnew<cr>
+nnoremap 5 :tabNext<cr>
+nnoremap 6 :vsplit<cr>
 
 " syntax highlighting and theme
 syntax enable
@@ -86,11 +101,6 @@ hi TabLineFill guifg=#2B2C2F
 hi TabLine guibg=#555557 guifg=#2B2C2F
 hi TabLineSel guifg=#BABABA guibg=#2B2C2F
 
-" splitpace configuration
-map <C-A> :vsplit<cr>
-set splitbelow
-set splitright
-
 " move line or selection up or down
 nnoremap <C-k> :m .-2<CR>==
 nnoremap <C-j> :m .+1<CR>==
@@ -100,9 +110,16 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " explorer settings
-map <C-E> :Explore<cr>
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+
+" trim all trailing whitespace (when exiting insert mode)
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+autocmd BufWritePre * :call TrimWhitespace()
 
 " better pasting on a Mac
 if &term =~ "xterm.*"
@@ -119,12 +136,4 @@ if &term =~ "xterm.*"
   cmap <Esc>[200~ <nop>
   cmap <Esc>[201~ <nop>
 endif
-
-" trim all trailing whitespace (when exiting insert mode)
-fun! TrimWhitespace()
-  let l:save = winsaveview()
-  %s/\s\+$//e
-  call winrestview(l:save)
-endfun
-autocmd BufWritePre * :call TrimWhitespace()
 

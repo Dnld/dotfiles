@@ -2822,14 +2822,14 @@
 		<key>0x5b-0x100000</key>
 		<dict>
 			<key>Action</key>
-			<integer>31</integer>
+			<integer>30</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
 		<key>0x5d-0x100000</key>
 		<dict>
 			<key>Action</key>
-			<integer>30</integer>
+			<integer>31</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -3028,15 +3028,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>236 303 224 232 0 0 1680 1028 </string>
+	<string>236 267 224 232 0 0 1680 1028 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>656 487 445 77 0 0 1680 1028 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 461 918 512 0 0 1680 1028 </string>
+	<string>718 407 928 394 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1021 566 650 452 0 0 1680 1028 </string>
+	<string>483 259 1186 758 0 0 1680 1028 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutMeta_selection</key>
@@ -3259,13 +3259,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.13867813348770142</real>
+				<real>0.18479642271995544</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.12891876697540283</real>
+				<real>0.17235127091407776</real>
 				<key>Red Component</key>
-				<real>0.12631300091743469</real>
+				<real>0.16846010088920593</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -6507,7 +6507,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-09T12:13:19Z</date>
+	<date>2018-03-17T17:53:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -6804,13 +6804,13 @@
 												<key>Alpha Component</key>
 												<real>1</real>
 												<key>Blue Component</key>
-												<real>0.13867813348770142</real>
+												<real>0.18479642271995544</real>
 												<key>Color Space</key>
-												<string>Calibrated</string>
+												<string>sRGB</string>
 												<key>Green Component</key>
-												<real>0.12891876697540283</real>
+												<real>0.17235127091407776</real>
 												<key>Red Component</key>
-												<real>0.12631300091743469</real>
+												<real>0.16846010088920593</real>
 											</dict>
 											<key>Background Image Is Tiled</key>
 											<false/>
@@ -7467,7 +7467,7 @@
 										<key>Session Default Name</key>
 										<string>Tomorrow Night</string>
 										<key>Session GUID</key>
-										<string>58735AD3-D763-4C89-977E-EAFD90C47328</string>
+										<string>EE5A9C44-227E-4637-8B81-ACC938CCEA2F</string>
 										<key>Session Name</key>
 										<string>Tomorrow Night</string>
 										<key>Session Window Title</key>
@@ -7513,15 +7513,15 @@
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
-				<string>pty-5046413C-AB9C-481D-8C7F-D336AE5CE893</string>
+				<string>pty-BE54D3EA-8CE6-4547-8886-67B47F8D0991</string>
 				<key>Width</key>
 				<real>650</real>
 				<key>Window Type</key>
 				<integer>0</integer>
 				<key>X Origin</key>
-				<real>1021</real>
+				<real>1019</real>
 				<key>Y Origin</key>
-				<real>566</real>
+				<real>565</real>
 			</dict>
 		</array>
 		<key>default</key>
