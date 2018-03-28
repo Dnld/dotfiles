@@ -95,7 +95,7 @@ if (has("termguicolors"))
 endif
 set background=dark
 set guifont=Source\ Code\ Pro:h13
-source ~/.vim/colors/Tomorrow-Night.vim
+source ~/.vim/colors/Thursday-Night.vim
 let g:airline_theme='adaptive'
 hi TabLineFill guifg=#2B2C2F
 hi TabLine guibg=#555557 guifg=#2B2C2F

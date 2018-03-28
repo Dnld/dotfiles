@@ -15,7 +15,7 @@
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleFontSmoothing</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -3030,13 +3030,13 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>236 267 224 232 0 0 1680 1028 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>656 487 445 77 0 0 1680 1028 </string>
+	<string>656 353 445 77 0 0 1680 1028 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>718 407 928 394 0 0 1680 1028 </string>
+	<string>533 241 918 512 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>483 259 1186 758 0 0 1680 1028 </string>
+	<string>1019 565 650 452 0 0 1680 1028 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutMeta_selection</key>
@@ -3705,7 +3705,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Tomorrow Night</string>
+			<string>Thursday Night</string>
 			<key>Non Ascii Font</key>
 			<string>SourceCodePro-Medium 13</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -3870,6 +3870,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>3</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
@@ -6507,7 +6509,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-17T17:53:54Z</date>
+	<date>2018-03-28T02:03:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
