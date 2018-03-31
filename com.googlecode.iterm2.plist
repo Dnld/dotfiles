@@ -3030,13 +3030,13 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>236 267 224 232 0 0 1680 1028 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>656 353 445 77 0 0 1680 1028 </string>
+	<string>656 219 445 77 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 493 620 392 0 0 1680 1050 </string>
+	<string>530 477 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>533 241 918 512 0 0 1680 1028 </string>
+	<string>533 183 918 492 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1019 565 650 452 0 0 1680 1028 </string>
+	<string>1017 563 650 452 0 0 1680 1028 </string>
 	<key>NeverWarnAboutMeta</key>
 	<true/>
 	<key>NeverWarnAboutMeta_selection</key>
@@ -3889,7 +3889,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.0114363704819276</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -6509,7 +6509,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-28T02:03:10Z</date>
+	<date>2018-03-31T23:50:46Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -7252,7 +7252,7 @@
 											<key>Mouse Reporting</key>
 											<true/>
 											<key>Name</key>
-											<string>Tomorrow Night</string>
+											<string>Thursday Night</string>
 											<key>Non Ascii Font</key>
 											<string>SourceCodePro-Medium 13</string>
 											<key>Non-ASCII Anti Aliased</key>
@@ -7417,6 +7417,8 @@
 											<array/>
 											<key>Terminal Type</key>
 											<string>xterm-256color</string>
+											<key>Thin Strokes</key>
+											<integer>3</integer>
 											<key>Transparency</key>
 											<real>0.0</real>
 											<key>Triggers</key>
@@ -7434,7 +7436,7 @@
 											<key>Use Italic Font</key>
 											<true/>
 											<key>Vertical Spacing</key>
-											<real>1</real>
+											<real>1.0114363704819276</real>
 											<key>Visual Bell</key>
 											<false/>
 											<key>Window Type</key>
@@ -7465,7 +7467,7 @@
 											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>25</integer>
+										<integer>23</integer>
 										<key>Session Default Name</key>
 										<string>Tomorrow Night</string>
 										<key>Session GUID</key>
@@ -7521,9 +7523,9 @@
 				<key>Window Type</key>
 				<integer>0</integer>
 				<key>X Origin</key>
-				<real>1019</real>
+				<real>1017</real>
 				<key>Y Origin</key>
-				<real>565</real>
+				<real>563</real>
 			</dict>
 		</array>
 		<key>default</key>
@@ -8533,7 +8535,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.6beta4</string>
+	<string>3.1.6beta5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
