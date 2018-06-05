@@ -14,7 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/vim-auto-save'
-Plugin 'Shougo/neocomplete'
 Plugin 'vim-airline/vim-airline'
 Plugin 'enricobacis/vim-airline-clock'
 Plugin 'vim-syntastic/syntastic'
@@ -38,16 +37,6 @@ let g:auto_save_in_insert_mode = 0
 
 " prevent excessive cpu usage by Git Gutter
 let g:gitgutter_async=0
-
-" enable Neocomplete and tab completion
-let g:neocomplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ neocomplete#start_manual_complete()
-fun! s:check_back_space() "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfun"}}}
 
 " NERDComToggleComment shortcut and configuration
 nnoremap 7 :call NERDComment(0,"toggle")<CR>
