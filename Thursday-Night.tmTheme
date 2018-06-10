@@ -140,7 +140,7 @@
       <key>fontStyle</key>
       <string>normal</string>
       <key>foreground</key>
-      <string>#c2c77b</string>
+      <string>#99C794</string>
     </dict>
   </dict>
   <dict>
@@ -217,7 +217,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#c2c77b</string>
+      <string>#99c794</string>
     </dict>
   </dict>
   <dict>
@@ -294,7 +294,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#c2c77b</string>
+      <string>#99c794</string>
     </dict>
   </dict>
   <dict>
