@@ -1,0 +1,63 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+        "spec": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/apm-install-dir-118513-5589-1j2xnlr.q50p44pldi"
+    ]
+  ],
+  "_from": "../d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+  "_id": "atom-thursday-night-syntax@1.3.0",
+  "_inCache": true,
+  "_location": "/atom-thursday-night-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+    "spec": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+  "_shasum": "657f58334d08e16082553728e71b45a734dcb1fd",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/d-118513-5589-1rfjsk0.70kfl2fbt9/package.tgz",
+  "_where": "/private/var/folders/zn/n7r5s62n1rq898sw85cjw9xh0000gn/T/apm-install-dir-118513-5589-1j2xnlr.q50p44pldi",
+  "bugs": {
+    "url": "https://github.com/Dnld/atom-thursday-night-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "Dark syntax theme based on Tomorrow Night",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/Dnld/atom-thursday-night-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "license": "MIT",
+  "name": "atom-thursday-night-syntax",
+  "optionalDependencies": {},
+  "readme": "# Thursday Night Color Scheme\n\nDark color scheme for Atom based on Tomorrow Night.\n\n![](https://raw.githubusercontent.com/Dnld/atom-thursday-night-syntax/master/screenshots/thursday-night-screenshot.png)\n\n### Colors\n\n```\ntext: #BABABA;\nbackground: #2B2C2F;\nselection: #3E4043;\ncomment: #555557;\ncursor: #81a2be;\nred: #cc6666;\norange: #de935f;\nyellow: #f0c674;\ngreen: #99C794;\naqua: #9ac9c4;\nblue: #81a2be;\npurple: #b294bb;\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dnld/atom-thursday-night-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "1.3.0"
+}
