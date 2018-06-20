@@ -147,11 +147,11 @@
     <key>name</key>
     <string>Class, Support</string>
     <key>scope</key>
-    <string>entity.name.class, entity.name.type.class, support.type, support.class, support.orther.namespace.use.php, meta.use.php, support.other.namespace.php</string>
+    <string>entity.name.class, entity.name.type.class, support.type, support.class, support.other.namespace.use.php, meta.use.php, support.other.namespace.php</string>
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#f4cf87</string>
+      <string>#cc6666</string>
     </dict>
   </dict>
   <dict>
