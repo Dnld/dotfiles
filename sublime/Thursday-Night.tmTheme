@@ -83,7 +83,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#9ac9c4</string>
+      <string>#8ABEB7</string>
     </dict>
   </dict>
   <dict>
@@ -94,7 +94,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#d77c79</string>
+      <string>#cc6666</string>
     </dict>
   </dict>
   <dict>
@@ -105,7 +105,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#92b2c9</string>
+      <string>#81A2Be</string>
     </dict>
   </dict>
   <dict>
@@ -116,7 +116,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#d77c79</string>
+      <string>#cc6666</string>
     </dict>
   </dict>
   <dict>
@@ -140,7 +140,7 @@
       <key>fontStyle</key>
       <string>normal</string>
       <key>foreground</key>
-      <string>#99C794</string>
+      <string>#B5BD68</string>
     </dict>
   </dict>
   <dict>
@@ -162,7 +162,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#d77c79</string>
+      <string>#cc6666</string>
     </dict>
   </dict>
   <dict>
@@ -173,7 +173,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#d77c79</string>
+      <string>#cc6666</string>
     </dict>
   </dict>
   <dict>
@@ -217,7 +217,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#99c794</string>
+      <string>#B5BD68</string>
     </dict>
   </dict>
   <dict>
@@ -228,7 +228,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#d77c79</string>
+      <string>#cc6666</string>
     </dict>
   </dict>
   <dict>
@@ -250,7 +250,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#9ac9c4</string>
+      <string>#8ABEB7</string>
     </dict>
   </dict>
   <dict>
@@ -261,7 +261,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#9ac9c4</string>
+      <string>#8ABEB7</string>
     </dict>
   </dict>
   <dict>
@@ -294,7 +294,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#99c794</string>
+      <string>#B5BD68</string>
     </dict>
   </dict>
   <dict>
@@ -305,7 +305,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#92b2c9</string>
+      <string>#81A2Be</string>
     </dict>
   </dict>
   <dict>
@@ -316,7 +316,7 @@
     <key>settings</key>
     <dict>
       <key>foreground</key>
-      <string>#d77c79</string>
+      <string>#CC6666</string>
     </dict>
   </dict>
   <dict>
@@ -345,7 +345,7 @@
   </dict>
   <dict>
     <key>name</key>
-    <string>Git Gutter Changed</string>
+    <string>Git Gutter Deleted</string>
     <key>scope</key>
     <string>markup.changed.git_gutter</string>
     <key>settings</key>
