@@ -40,94 +40,59 @@
     </dict>
     <dict>
       <key>name</key>
-      <string>Diff foreground</string>
+      <string>Search Results Nums</string>
       <key>scope</key>
-      <string>markup.inserted.diff, markup.deleted.diff, meta.diff.header.to-file, meta.diff.header.from-file</string>
+      <string>constant.numeric.line-number.find-in-files - match</string>
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#FFFFFF</string>
+        <string>#555557</string>
       </dict>
     </dict>
     <dict>
       <key>name</key>
-      <string>Diff insertion</string>
+      <string>Search Results Lines</string>
       <key>scope</key>
-      <string>markup.inserted.diff, meta.diff.header.to-file</string>
+      <string>entity.name.filename.find-in-files</string>
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#718c00</string>
+        <string>#8FC192</string>
       </dict>
     </dict>
     <dict>
       <key>name</key>
-      <string>Diff deletion</string>
+      <string>Git Gutter Inserted</string>
       <key>scope</key>
-      <string>markup.deleted.diff, meta.diff.header.from-file</string>
-      <key>settings</key>
-      <dict>
-        <key>foreground</key>
-        <string>#c82829</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>name</key>
-      <string>Diff header</string>
-      <key>scope</key>
-      <string>meta.diff.header.from-file, meta.diff.header.to-file</string>
-      <key>settings</key>
-      <dict>
-        <key>foreground</key>
-        <string>#FFFFFF</string>
-        <key>background</key>
-        <string>#80A2BE</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>name</key>
-      <string>Diff range</string>
-      <key>scope</key>
-      <string>meta.diff.range</string>
+      <string>markup.inserted.git_gutter</string>
       <key>settings</key>
       <dict>
         <key>fontStyle</key>
-        <string>italic</string>
+        <string>normal</string>
         <key>foreground</key>
-        <string>#3e999f</string>
+        <string>#8FC192</string>
       </dict>
     </dict>
     <dict>
       <key>name</key>
-      <string>diff.deleted</string>
+      <string>Git Gutter Deleted</string>
       <key>scope</key>
-      <string>markup.deleted</string>
+      <string>markup.deleted.git_gutter</string>
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#BF616A</string>
+        <string>#CC6666</string>
       </dict>
     </dict>
     <dict>
       <key>name</key>
-      <string>diff.inserted</string>
+      <string>Git Gutter Deleted</string>
       <key>scope</key>
-      <string>markup.inserted</string>
+      <string>markup.changed.git_gutter</string>
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#A3BE8C</string>
-      </dict>
-    </dict>
-    <dict>
-      <key>name</key>
-      <string>diff.changed</string>
-      <key>scope</key>
-      <string>markup.changed</string>
-      <key>settings</key>
-      <dict>
-        <key>foreground</key>
-        <string>##EBCB8B</string>
+        <string>#F4CF87</string>
       </dict>
     </dict>
   </array>
