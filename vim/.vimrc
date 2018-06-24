@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated March 26, 2018
+" Updated June 23, 2018
 
 " Vundle
 set nocompatible
@@ -14,9 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/vim-auto-save'
-Plugin 'vim-airline/vim-airline'
-Plugin 'enricobacis/vim-airline-clock'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 
@@ -25,10 +22,6 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " plugin settings
-
-" Airline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#clock#format = '%H:%M'
 
 " Autosave settings
 let g:auto_save = 1
@@ -64,10 +57,11 @@ set incsearch
 set ignorecase
 set smartcase
 set nowrap
-set noshowmode
 set splitbelow
 set splitright
 set mouse=a
+set ruler
+set statusline=%f
 nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 nnoremap 1 :Explore<cr>
@@ -84,8 +78,7 @@ if (has("termguicolors"))
 endif
 set background=dark
 set guifont=Source\ Code\ Pro:h13
-source ~/.vim/colors/Thursday-Night.vim
-let g:airline_theme='adaptive'
+source ~/.vim/colors/Monochrome.vim
 hi TabLineFill guifg=#2B2C2F
 hi TabLine guibg=#555557 guifg=#2B2C2F
 hi TabLineSel guifg=#BABABA guibg=#2B2C2F
