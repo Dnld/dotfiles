@@ -7,7 +7,7 @@
 
 " Default GUI Colours
 let s:foreground = "BABABA"
-let s:background = ""
+let s:background = "2B2C2F"
 let s:selection = "3E4043"
 let s:line = "3E4043"
 let s:comment = "555557"
@@ -18,12 +18,12 @@ let s:green = "99C794"
 let s:aqua = "9ac9c4"
 let s:blue = "81a2be"
 let s:purple = "b294bb"
-let s:window = ""
+let s:window = "2B2C2F"
 
 " Console 256 Colours
 if !has("gui_running")
-	let s:background = ""
-	let s:window = ""
+	let s:background = "2B2C2F"
+	let s:window = "2B2C2F"
 	let s:line = "3E4043"
 	let s:selection = "3E4043"
 end
