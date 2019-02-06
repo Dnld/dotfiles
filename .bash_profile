@@ -1,11 +1,10 @@
 # bash profile
-# updated August 19, 2017
+# updated February 5, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
 
-# set paths
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# set paths=/usr/local/bin:/usr/local/sbin:$PATH
 
 # prompt
 export PS1="\[\033[2m\]\W\$(parse_git_branch) $\[\033[0m\] "
@@ -22,6 +21,7 @@ alias ..="cd ../"
 alias ...="cd ../../"
 alias cp="cp -iv"
 alias f="open -a Finder ./"
+alias l="less"
 alias ll="ls -lahG"
 alias mk="mkdir -v"
 alias mv="mv -iv"
@@ -31,6 +31,7 @@ alias rbp="source ~/.bash_profile"
 alias rm="rm -iv"
 alias t="touch"
 alias v="vim"
+alias vrc="vim ~/.vimrc"
 function ts() {
   touch "$1"
   sublime "$1"
@@ -62,27 +63,11 @@ function pwdc() {
   pwd
 }
 
-# application shortcuts
-alias act="open -a activity\ monitor"
-alias cal="open -a calendar"
-alias con="open -a contacts"
-alias itu="open -a itunes"
-alias mai="open -a mail"
-alias mes="open -a messages"
-alias pho="open -a photos"
-alias sim="open -a simplenote"
-alias sla="open -a slack"
-alias twe="open -a tweetbot"
-
 # navigational shortcuts
-alias db="cd ~/Dropbox/"
 alias desk="cd ~/Desktop"
-alias dev="cd ~/Dropbox/development"
+alias dev="cd ~/Documents/development"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
-
-# Chrome shortcuts
-alias chr="open -a google\ chrome"
 
 # Git shortcuts
 alias ga="git add"
@@ -105,7 +90,7 @@ alias gpfo="git push -f origin"
 alias gpfom="git push -f origin master"
 alias gpl="git pull"
 alias gpo="git push origin"
-alias gpod="git push origin develop"
+alias gpod="git push origin development"
 alias gpom="git push origin master"
 alias gpu="git push"
 alias gpuf="git push -f"
@@ -127,22 +112,14 @@ alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
 
 # Node shortcuts
 alias no="node"
-alias nde="nodemon"
 
 # Python shortcuts
-alias pss="python -m SimpleHTTPServer"
-alias py2="python"
-alias py3="python3"
-
-# Safari shortcuts
-alias saf="open -a safari"
+alias python="python3"
+alias python2="python2"
 
 # Sublime shortcuts
 alias s="sublime"
 alias s.="sublime ."
-
-# Xcode shortcuts
-alias xco="open -a xcode"
 
 # Git branch in prompt
 function parse_git_branch() {
@@ -153,3 +130,4 @@ function parse_git_branch() {
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
 ################################################################################
+
