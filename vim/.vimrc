@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated February 5, 2019
+" Updated February 10, 2019
 
 " Vundle
 set nocompatible
@@ -50,9 +50,7 @@ let g:NERDDefaultAlign = 'left'
 " general settings
 set formatoptions=tcroql
 inoremap jj <Esc>
-let mapleader="9"
-inoremap <leader>9 <Esc>
-vnoremap <leader>9 <Esc>
+let mapleader="<Space>"
 set number
 set tabstop=4
 set shiftwidth=4
@@ -78,6 +76,10 @@ nnoremap 3 :buffers<cr>
 nnoremap 4 :tabnew<cr>
 nnoremap 5 :tabNext<cr>
 nnoremap 6 :vsplit<cr>
+nnoremap 8 <<
+nnoremap 9 >>
+vnoremap 8 <gv
+vnoremap 9 >gv
 
 " syntax highlighting and theme
 syntax enable
@@ -86,11 +88,10 @@ if (has("termguicolors"))
 endif
 set background=dark
 set guifont=Source\ Code\ Pro:h13
-source ~/.vim/colors/Thursday-Night.vim
+source ~/.vim/colors/Thursday-Night-Monochrome.vim
 let g:airline_theme='adaptive'
 hi TabLineFill guifg=#2B2C2F
 hi TabLine guibg=#555557 guifg=#2B2C2F
-hi TabLineSel guifg=#BABABA guibg=#2B2C2F
 
 " move line or selection up or down
 nnoremap <C-k> :m .-2<CR>==
@@ -127,4 +128,3 @@ if &term =~ "xterm.*"
  cmap <Esc>[200~ <nop>
  cmap <Esc>[201~ <nop>
 endif
-
