@@ -1,13 +1,13 @@
 # bash profile
-# updated February 5, 2019
+# updated March 24, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
 
-# set paths=/usr/local/bin:/usr/local/sbin:$PATH
+# paths
 
 # prompt
-export PS1="\[\033[2m\]\W\$(parse_git_branch) $\[\033[0m\] "
+export PS1="\[\033[38;5;242m\]\W\$(parse_git_branch) $\[\033[0m\] "
 
 # default editor
 export EDITOR=vim
