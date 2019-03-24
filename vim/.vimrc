@@ -1,30 +1,25 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated February 10, 2019
+" Updated March 24, 2019
 
-" Vundle
-set nocompatible
-filetype off
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Plug begin
+call plug#begin('~/.vim/plugged')
 
 " plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-scripts/vim-auto-save'
-Plugin 'vim-airline/vim-airline'
-Plugin 'enricobacis/vim-airline-clock'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-surround'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'fatih/vim-go'
+Plug 'Shougo/deoplete.nvim'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+Plug 'roxma/nvim-yarp'
+Plug 'vim-scripts/vim-auto-save'
+Plug 'vim-airline/vim-airline'
+Plug 'enricobacis/vim-airline-clock'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'fatih/vim-go'
 
-" plugins must be added before this line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Plug end
+call plug#end()
 
 " plugin settings
 
@@ -37,12 +32,19 @@ let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_in_insert_mode = 0
 
+" Deploete
+let g:deoplete#enable_at_startup = 1
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+
 " prevent excessive cpu usage by Git Gutter
 let g:gitgutter_async=0
 
 " NERDComToggleComment shortcut and configuration
-nnoremap 7 :call NERDComment(0,"toggle")<CR>
-vnoremap 7 :call NERDComment(0,"toggle")<CR>
+nnoremap ' :call NERDComment(0,"toggle")<CR>
+vnoremap ' :call NERDComment(0,"toggle")<CR>
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
@@ -50,7 +52,6 @@ let g:NERDDefaultAlign = 'left'
 " general settings
 set formatoptions=tcroql
 inoremap jj <Esc>
-let mapleader="<Space>"
 set number
 set tabstop=4
 set shiftwidth=4
@@ -68,38 +69,44 @@ set noshowmode
 set splitbelow
 set splitright
 set mouse=a
+
+" search
 nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
+
+" file navigation and exploration
 nnoremap 1 :Explore<cr>
-nnoremap 2 :CtrlP<cr>
+nnoremap 2 :FZF<cr>
 nnoremap 3 :buffers<cr>
 nnoremap 4 :tabnew<cr>
 nnoremap 5 :tabNext<cr>
 nnoremap 6 :vsplit<cr>
-nnoremap 8 <<
-nnoremap 9 >>
-vnoremap 8 <gv
-vnoremap 9 >gv
+nnoremap 7 <C-W>h
+nnoremap 8 <C-W>l
 
-" syntax highlighting and theme
-syntax enable
+" colors, theme, font
 if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-set guifont=Source\ Code\ Pro:h13
 source ~/.vim/colors/Thursday-Night-Monochrome.vim
+set guifont=Source\ Code\ Pro:h13
+syntax enable
 let g:airline_theme='adaptive'
 hi TabLineFill guifg=#2B2C2F
 hi TabLine guibg=#555557 guifg=#2B2C2F
 
-" move line or selection up or down
+" move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
 nnoremap <C-j> :m .+1<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <C-h> <<
+nnoremap <C-l> >>
+vnoremap <C-h> <gv
+vnoremap <C-l> >gv
 
 " explorer settings
 let g:netrw_banner = 0
