@@ -13,7 +13,6 @@ export PS1="\[\033[38;5;242m\]\W\$(parse_git_branch) $\[\033[0m\] "
 export EDITOR=vim
 
 # environment shortcuts
-alias bp="vim ~/.bash_profile"
 alias c="clear"
 alias c-="cd -"
 alias cd..="cd ../"
@@ -27,11 +26,9 @@ alias mk="mkdir -v"
 alias mv="mv -iv"
 alias pc="pbcopy"
 alias pp="pbpaste"
-alias rbp="source ~/.bash_profile"
 alias rm="rm -iv"
 alias t="touch"
 alias v="vim"
-alias vrc="vim ~/.vimrc"
 function ts() {
   touch "$1"
   sublime "$1"
@@ -63,13 +60,19 @@ function pwdc() {
   pwd
 }
 
-# navigational shortcuts
+# dotfiles
+alias bp="vim ~/.bash_profile"
+alias rbp="source ~/.bash_profile"
+alias vrc="vim ~/.vimrc"
+alias vtc="vim ~/.tmux.conf"
+
+# navigation
 alias desk="cd ~/Desktop"
 alias dev="cd ~/Documents/development"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
 
-# Git shortcuts
+# git
 alias ga="git add"
 alias gaa="git add -A"
 alias gad="git add ."
@@ -107,26 +110,33 @@ alias gss="git status"
 alias get="git"
 alias got="git"
 
-# Networking shortcuts
+# open ports
 alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
 
-# Node shortcuts
-alias no="node"
+# node
+alias nn="node"
 
-# Python shortcuts
+# python
 alias python="python3"
 alias python2="python2"
 
-# Sublime shortcuts
+# sublime
 alias s="sublime"
 alias s.="sublime ."
 
-# Git branch in prompt
+# tmux
+alias tt="tmux"
+alias tte="exit"
+alias ttks="tmux kill-server"
+alias ttll="tmux ls"
+alias ttra="tmux reattach"
+
+# git branch in prompt
 function parse_git_branch() {
   git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"
 }
 
-# Node path
+# node path
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
 ################################################################################
