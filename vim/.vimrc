@@ -14,7 +14,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'roxma/nvim-yarp'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
-Plug 'enricobacis/vim-airline-clock'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'fatih/vim-go'
 
@@ -74,7 +73,7 @@ set mouse=a
 nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
-" file navigation and exploration
+" file navigation, window management
 nnoremap 1 :Explore<cr>
 nnoremap 2 :FZF<cr>
 nnoremap 3 :buffers<cr>
@@ -83,6 +82,10 @@ nnoremap 5 :tabNext<cr>
 nnoremap 6 :vsplit<cr>
 nnoremap 7 <C-W>h
 nnoremap 8 <C-W>l
+
+" map 9 to escape in visual mode
+vnoremap 9 <Esc>
+vnoremap 9 <Esc>
 
 " colors, theme, font
 if (has("termguicolors"))
