@@ -1,5 +1,5 @@
 # bash profile
-# updated March 24, 2019
+# updated March 25, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -20,7 +20,7 @@ alias ..="cd ../"
 alias ...="cd ../../"
 alias cp="cp -iv"
 alias f="open -a Finder ./"
-aslias hc="history -c"
+alias hc="history -c"
 alias l="less"
 alias ll="ls -lahG"
 alias mk="mkdir -v"
@@ -64,6 +64,7 @@ function pwdc() {
 # dotfiles
 alias bp="vim ~/.bash_profile"
 alias rbp="source ~/.bash_profile"
+alias rtc="tmux source ~/.tmux.conf"
 alias vrc="vim ~/.vimrc"
 alias vtc="vim ~/.tmux.conf"
 
@@ -127,10 +128,12 @@ alias s.="sublime ."
 
 # tmux
 alias tt="tmux"
+alias tta="tmux attach -t"
+alias ttd="tmux detach"
 alias tte="exit"
-alias ttks="tmux kill-server"
-alias ttll="tmux ls"
-alias ttra="tmux reattach"
+alias ttk="tmux kill-server"
+alias ttl="tmux ls"
+alias ttn="tmux new -s "
 
 # git branch in prompt
 function parse_git_branch() {

@@ -1,20 +1,16 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated March 24, 2019
+" Updated March 25, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
 
 " plugins
-Plug 'Shougo/deoplete.nvim'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
-Plug 'roxma/nvim-yarp'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
-Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'fatih/vim-go'
 
 " Plug end
