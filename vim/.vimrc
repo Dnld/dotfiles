@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated March 25, 2019
+" Updated March 27, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -9,8 +9,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
+Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'fatih/vim-go'
 
 " Plug end
@@ -44,6 +46,12 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 
+" NERDTree
+map 2 :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " general settings
 set formatoptions=tcroql
 inoremap jj <Esc>
@@ -71,17 +79,13 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " file navigation, window management
 nnoremap 1 :Explore<cr>
-nnoremap 2 :FZF<cr>
-nnoremap 3 :buffers<cr>
-nnoremap 4 :tabnew<cr>
-nnoremap 5 :tabNext<cr>
-nnoremap 6 :vsplit<cr>
-nnoremap 7 <C-W>h
-nnoremap 8 <C-W>l
-
-" map 9 to escape in visual mode
-vnoremap 9 <Esc>
-vnoremap 9 <Esc>
+nnoremap 3 :FZF<cr>
+nnoremap 4 :buffers<cr>
+nnoremap 5 :tabnew<cr>
+nnoremap 6 :tabNext<cr>
+nnoremap 7 :vsplit<cr>
+nnoremap 8 <C-W>h
+nnoremap 9 <C-W>l
 
 " colors, theme, font
 if (has("termguicolors"))
