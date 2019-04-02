@@ -28,7 +28,7 @@ function! airline#themes#adaptive#refresh()
   let g:airline#themes#adaptive#palette.replace_modified = g:airline#themes#adaptive#palette.normal_modified
 
   let s:V1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Constant', 'fg'], 'bold')
-  let s:V2 = airline#themes#get_highlight2(['Constant', 'fg'], ['Normal', 'bg'])
+  let s:V2 = s:N2
   let s:V3 = s:N3
   let g:airline#themes#adaptive#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
   let g:airline#themes#adaptive#palette.visual_modified = g:airline#themes#adaptive#palette.normal_modified

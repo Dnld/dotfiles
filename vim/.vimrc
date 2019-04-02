@@ -1,19 +1,18 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated March 27, 2019
+" Updated April 2, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
 
 " plugins
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'fatih/vim-go'
 
 " Plug end
 call plug#end()
@@ -22,7 +21,10 @@ call plug#end()
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#clock#format = '%H:%M'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_section_y = '%3p%%'
+let g:airline_section_z = '%3l %2v'
 
 " Autosave settings
 let g:auto_save = 1
@@ -47,7 +49,7 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 
 " NERDTree
-map 2 :NERDTreeToggle<CR>
+map 1 :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -78,9 +80,9 @@ nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " file navigation, window management
-nnoremap 1 :Explore<cr>
-nnoremap 3 :FZF<cr>
-nnoremap 4 :buffers<cr>
+nnoremap 2 :FZF<cr>
+nnoremap 3 :buffers<CR>:buffer<Space>
+nnoremap 4 :bd<cr>
 nnoremap 5 :tabnew<cr>
 nnoremap 6 :tabNext<cr>
 nnoremap 7 :vsplit<cr>
