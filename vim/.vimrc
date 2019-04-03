@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 2, 2019
+" Updated April 3, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -49,7 +49,6 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 
 " NERDTree
-map 1 :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -57,6 +56,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " general settings
 set formatoptions=tcroql
 inoremap jj <Esc>
+let mapleader = "\<Space>"
 set number
 set tabstop=4
 set shiftwidth=4
@@ -80,14 +80,18 @@ nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " file navigation, window management
-nnoremap 2 :FZF<cr>
-nnoremap 3 :buffers<CR>:buffer<Space>
-nnoremap 4 :bd<cr>
-nnoremap 5 :tabnew<cr>
-nnoremap 6 :tabNext<cr>
-nnoremap 7 :vsplit<cr>
-nnoremap 8 <C-W>h
-nnoremap 9 <C-W>l
+map <Leader>1 :NERDTreeToggle<CR>
+nnoremap <Leader>2 :FZF<cr>
+nnoremap <Leader>3 :buffers<CR>:buffer<Space>
+nnoremap <Leader>4 :bd<cr>
+nnoremap <Leader>5 :tabnew<cr>
+nnoremap <Leader>6 :tabNext<cr>
+nnoremap <Leader>7 :vsplit n<cr>
+nnoremap <Leader>8 <C-W>h
+nnoremap <Leader>9 <C-W>l
+nnoremap <Leader>0 :split n<cr>
+nnoremap <Leader>- <C-W>j
+nnoremap <Leader>= <C-W>k
 
 " colors, theme, font
 if (has("termguicolors"))
