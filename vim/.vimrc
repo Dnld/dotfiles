@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 3, 2019
+" Updated April 4, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -11,6 +11,7 @@ Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 
@@ -52,6 +53,9 @@ let g:NERDDefaultAlign = 'left'
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " general settings
 set formatoptions=tcroql
