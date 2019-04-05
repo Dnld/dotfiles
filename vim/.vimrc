@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 4, 2019
+" Updated April 5, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -82,6 +82,9 @@ set mouse=a
 " search
 nnoremap , :noh<CR><CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
+
+" bind R to r for replace mode
+nnoremap r R
 
 " file navigation, window management
 map <Leader>1 :NERDTreeToggle<CR>
