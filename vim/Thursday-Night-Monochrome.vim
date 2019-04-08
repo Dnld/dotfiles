@@ -1,6 +1,6 @@
 " Thursday Night Monochrome - Full Color and 256 Color
 " https://github.com/Dnld/dotfiles
-" Updated February 6, 2019
+" Updated April 8, 2019
 "
 " Adapted from Tomorrow Night (http://chriskempson.com)
 " Hex colour conversion functions borrowed from the theme "Desert256""
@@ -259,6 +259,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Question", s:green, "", "")
 	call <SID>X("WarningMsg", s:background, s:red, "")
 	call <SID>X("Error", s:background, s:red, "")
+	call <SID>X("ErrorMsg", s:background, s:red, "")
 	call <SID>X("MatchParen", "", s:selection, "")
 	call <SID>X("Folded", s:window, s:background, "")
 	call <SID>X("FoldColumn", "", s:background, "")
