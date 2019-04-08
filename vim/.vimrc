@@ -1,19 +1,22 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 5, 2019
+" Updated April 8, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
 
 " plugins
+Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
+Plug 'w0rp/ale'
 
 " Plug end
 call plug#end()
@@ -28,6 +31,11 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = '|'
 let g:airline_section_y = '%3p%%'
 let g:airline_section_z = '%3l %2v'
+let g:airline#extensions#ale#enabled = 0
+
+" Ale
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
 
 " Autosave settings
 let g:auto_save = 1
@@ -42,7 +50,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 set rtp+=/usr/local/opt/fzf
 
 " prevent excessive cpu usage by Git Gutter
-let g:gitgutter_async=0
+let g:gitgutter_async = 0
 
 " NERDComToggleComment shortcut and configuration
 nnoremap ' :call NERDComment(0,"toggle")<CR>
@@ -52,8 +60,8 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 
 " NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeMinimalUI=1
+let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YouCompleteMe
