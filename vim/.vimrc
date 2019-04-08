@@ -36,6 +36,8 @@ let g:airline#extensions#ale#enabled = 0
 " Ale
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+let g:ale_set_highlights = 0
+hi ALEWarningSign guifg=#BABABA
 
 " Autosave settings
 let g:auto_save = 1
