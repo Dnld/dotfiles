@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 8, 2019
+" Updated April 9, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -34,6 +34,7 @@ let g:airline_section_z = '%3l %2v'
 let g:airline#extensions#ale#enabled = 0
 
 " Ale
+let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_set_highlights = 0
