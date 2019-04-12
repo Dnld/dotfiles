@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 9, 2019
+" Updated April 12, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 " plugins
 Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -45,12 +46,22 @@ let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_in_insert_mode = 0
 
-" Deploete
-let g:deoplete#enable_at_startup = 1
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 " fzf
 set rtp+=/usr/local/opt/fzf
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 " prevent excessive cpu usage by Git Gutter
 let g:gitgutter_async = 0
@@ -100,30 +111,28 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 nnoremap r R
 
 " file navigation, window management
-map <Leader>1 :NERDTreeToggle<CR>
+nnoremap <Leader>1 :Explore<CR>
 nnoremap <Leader>2 :FZF<cr>
-nnoremap <Leader>3 :buffers<CR>:buffer<Space>
-nnoremap <Leader>4 :bd<cr>
-nnoremap <Leader>5 :tabnew<cr>
-nnoremap <Leader>6 :tabNext<cr>
-nnoremap <Leader>7 :vsplit n<cr>
-nnoremap <Leader>8 <C-W>h
-nnoremap <Leader>9 <C-W>l
-nnoremap <Leader>0 :split n<cr>
-nnoremap <Leader>- <C-W>j
-nnoremap <Leader>= <C-W>k
+nnoremap <Leader>3 :Ag<cr>
+nnoremap <Leader>4 :buffers<CR>:buffer<Space>
+nnoremap <Leader>5 :bn<cr>
+nnoremap <Leader>6 :bd<cr>
+nnoremap <Leader>7 :tabnew<cr>
+nnoremap <Leader>8 :tabNext<cr>
+nnoremap <Leader>9 <C-W>h
+nnoremap <Leader>0 <C-W>j
+nnoremap <Leader>- <C-W>k
+nnoremap <Leader>= <C-W>l
 
 " colors, theme, font
 if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-source ~/.vim/colors/Thursday-Night-Monochrome.vim
+colorscheme nord
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
-hi TabLineFill guifg=#2B2C2F
-hi TabLine guibg=#555557 guifg=#2B2C2F
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==

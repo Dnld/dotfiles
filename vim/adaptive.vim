@@ -1,3 +1,7 @@
+" Donald Steinert adaptive.vim
+" https://github.com/Dnld/dotfiles
+" Updated April 12, 2019
+
 let g:airline#themes#adaptive#palette = {}
 
 function! airline#themes#adaptive#refresh()
@@ -15,7 +19,7 @@ function! airline#themes#adaptive#refresh()
         \ 'airline_c': [ group[0], '', group[2], '', '' ]
         \ }
 
-  let s:I1 = airline#themes#get_highlight2(['Normal', 'bg'], ['MoreMsg', 'fg'], 'bold')
+  let s:I1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Character', 'fg'], 'bold')
   let s:I2 = airline#themes#get_highlight2(['MoreMsg', 'fg'], ['Normal', 'bg'])
   let s:I3 = s:N3
   let g:airline#themes#adaptive#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
