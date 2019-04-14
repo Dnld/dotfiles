@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 12, 2019
+" Updated April 14, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -8,9 +8,9 @@ call plug#begin('~/.vim/plugged')
 " plugins
 Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
+Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -18,6 +18,9 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
+
+" Themes to try out
+Plug 'nightsense/cosmic_latte'
 
 " Plug end
 call plug#end()
@@ -111,14 +114,14 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 nnoremap r R
 
 " file navigation, window management
-nnoremap <Leader>1 :Explore<CR>
-nnoremap <Leader>2 :FZF<cr>
-nnoremap <Leader>3 :Ag<cr>
-nnoremap <Leader>4 :buffers<CR>:buffer<Space>
-nnoremap <Leader>5 :bn<cr>
-nnoremap <Leader>6 :bd<cr>
-nnoremap <Leader>7 :tabnew<cr>
-nnoremap <Leader>8 :tabNext<cr>
+nnoremap <Leader>1 :NERDTreeToggle<CR>
+nnoremap <Leader>2 :Explore<CR>
+nnoremap <Leader>3 :FZF<CR>
+nnoremap <Leader>4 :Ag<cr>
+nnoremap <Leader>5 :buffers<CR>:buffer<Space>
+nnoremap <Leader>6 :bd<CR>
+nnoremap <Leader>7 :new<CR>
+nnoremap <Leader>8 :vnew<CR>
 nnoremap <Leader>9 <C-W>h
 nnoremap <Leader>0 <C-W>j
 nnoremap <Leader>- <C-W>k
@@ -129,10 +132,13 @@ if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-colorscheme nord
+colorscheme snow
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
+highlight VertSplit guifg=#363A3E guibg=#363A3E
+highlight LineNr guibg=#363A3E
+highlight SignColumn guibg=#363A3E
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
