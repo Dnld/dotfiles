@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 14, 2019
+" Updated April 15, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -42,7 +42,9 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_set_highlights = 0
-hi ALEWarningSign guifg=#BABABA
+let g:ale_change_sign_column_color = 0
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
 
 " Autosave settings
 let g:auto_save = 1
@@ -133,20 +135,24 @@ if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-colorscheme snow
+colorscheme cosmic_latte
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
 " for snow theme
-highlight VertSplit guifg=#363A3E guibg=#363A3E
-highlight LineNr guibg=#363A3E
-highlight SignColumn guibg=#363A3E
-highlight CursorLineNr guifg=#759ABD guibg=#363A3E
-" for cosmic latte  theme
 " highlight VertSplit guifg=#363A3E guibg=#363A3E
 " highlight LineNr guibg=#363A3E
 " highlight SignColumn guibg=#363A3E
 " highlight CursorLineNr guifg=#759ABD guibg=#363A3E
+" highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
+" highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
+" for cosmic latte  theme
+highlight VertSplit guifg=#2B3740 guibg=#2B3740
+highlight LineNr guibg=#2B3740
+highlight SignColumn guibg=#2B3740
+highlight CursorLineNr guifg=#5496BD guibg=#2B3740
+highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
+highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
