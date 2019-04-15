@@ -89,6 +89,7 @@ set formatoptions=tcroql
 inoremap jj <Esc>
 let mapleader = "\<Space>"
 set number
+set relativenumber
 set tabstop=4
 set shiftwidth=4
 set smartindent
@@ -136,9 +137,16 @@ colorscheme snow
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
+" for snow theme
 highlight VertSplit guifg=#363A3E guibg=#363A3E
 highlight LineNr guibg=#363A3E
 highlight SignColumn guibg=#363A3E
+highlight CursorLineNr guifg=#759ABD guibg=#363A3E
+" for cosmic latte  theme
+" highlight VertSplit guifg=#363A3E guibg=#363A3E
+" highlight LineNr guibg=#363A3E
+" highlight SignColumn guibg=#363A3E
+" highlight CursorLineNr guifg=#759ABD guibg=#363A3E
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
