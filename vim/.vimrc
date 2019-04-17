@@ -100,6 +100,9 @@ set noshowmode
 set splitbelow
 set splitright
 set mouse=a
+set nobackup
+set nowritebackup
+set noswapfile
 
 " search
 nnoremap , :noh<CR><CR>
@@ -111,9 +114,9 @@ nnoremap r R
 " file navigation, window management
 nnoremap <Leader>1 :Explore<CR>
 nnoremap <Leader>2 :FZF<CR>
-nnoremap <Leader>3 :Ag<cr>
-nnoremap <Leader>4 :buffers<CR>:buffer<Space>
-nnoremap <Leader>5 :bnext<CR>
+nnoremap <Leader>3 :buffers<CR>:buffer<Space>
+nnoremap <Leader>4 :bnext<CR>
+nnoremap <Leader>5 :bprevious<CR>
 nnoremap <Leader>6 :bd<CR>
 nnoremap <Leader>7 :new<CR>
 nnoremap <Leader>8 :vnew<CR>
