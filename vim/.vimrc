@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 15, 2019
+" Updated April 17, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -10,17 +10,14 @@ Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
+Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
-
-" Themes to try out
-Plug 'nightsense/cosmic_latte'
 
 " Plug end
 call plug#end()
@@ -78,11 +75,6 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 
-" NERDTree
-let NERDTreeShowHidden = 1
-let NERDTreeMinimalUI = 1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
@@ -117,11 +109,11 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 nnoremap r R
 
 " file navigation, window management
-nnoremap <Leader>1 :NERDTreeToggle<CR>
-nnoremap <Leader>2 :Explore<CR>
-nnoremap <Leader>3 :FZF<CR>
-nnoremap <Leader>4 :Ag<cr>
-nnoremap <Leader>5 :buffers<CR>:buffer<Space>
+nnoremap <Leader>1 :Explore<CR>
+nnoremap <Leader>2 :FZF<CR>
+nnoremap <Leader>3 :Ag<cr>
+nnoremap <Leader>4 :buffers<CR>:buffer<Space>
+nnoremap <Leader>5 :bnext<CR>
 nnoremap <Leader>6 :bd<CR>
 nnoremap <Leader>7 :new<CR>
 nnoremap <Leader>8 :vnew<CR>
@@ -146,7 +138,7 @@ let g:airline_theme='adaptive'
 " highlight CursorLineNr guifg=#759ABD guibg=#363A3E
 " highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
 " highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
-" for cosmic latte  theme
+" for cosmic latte theme
 highlight VertSplit guifg=#2B3740 guibg=#2B3740
 highlight LineNr guibg=#2B3740
 highlight SignColumn guibg=#2B3740
