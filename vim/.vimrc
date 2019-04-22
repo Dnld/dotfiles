@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 17, 2019
+" Updated April 22, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -12,6 +12,7 @@ Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
+Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
@@ -64,6 +65,9 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " prevent excessive cpu usage by Git Gutter
 let g:gitgutter_async = 0
@@ -82,6 +86,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 set formatoptions=tcroql
 inoremap jj <Esc>
 let mapleader = "\<Space>"
+set guicursor=
 set number
 set relativenumber
 set tabstop=4
@@ -91,7 +96,7 @@ set autoindent
 set cindent
 set smarttab
 set expandtab
-set hlsearch!
+set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -130,24 +135,24 @@ if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-colorscheme cosmic_latte
+colorscheme snow
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
 " for snow theme
-" highlight VertSplit guifg=#363A3E guibg=#363A3E
-" highlight LineNr guibg=#363A3E
-" highlight SignColumn guibg=#363A3E
-" highlight CursorLineNr guifg=#759ABD guibg=#363A3E
-" highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
-" highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
+highlight VertSplit guifg=#363A3E guibg=#363A3E
+highlight LineNr guibg=#363A3E
+highlight SignColumn guibg=#363A3E
+highlight CursorLineNr guifg=#759ABD guibg=#363A3E
+highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
+highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
 " for cosmic latte theme
-highlight VertSplit guifg=#2B3740 guibg=#2B3740
-highlight LineNr guibg=#2B3740
-highlight SignColumn guibg=#2B3740
-highlight CursorLineNr guifg=#5496BD guibg=#2B3740
-highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
-highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
+" highlight VertSplit guifg=#2B3740 guibg=#2B3740
+" highlight LineNr guibg=#2B3740
+" highlight SignColumn guibg=#2B3740
+" highlight CursorLineNr guifg=#5496BD guibg=#2B3740
+" highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
+" highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
