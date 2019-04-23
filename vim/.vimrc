@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 22, 2019
+" Updated April 23, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -52,7 +52,7 @@ let g:auto_save_in_insert_mode = 0
 " fzf
 set rtp+=/usr/local/opt/fzf
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
+ \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
   \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
@@ -67,7 +67,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+ \| autocmd BufLeave <buffer> set laststatus=2 noshowmode noruler
 
 " prevent excessive cpu usage by Git Gutter
 let g:gitgutter_async = 0
@@ -117,7 +117,8 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 nnoremap r R
 
 " file navigation, window management
-nnoremap <Leader>1 :Explore<CR>
+" nnoremap <Leader>1 :Explore<CR>
+nnoremap <Leader>1 :call ToggleNetrw()<CR>
 nnoremap <Leader>2 :FZF<CR>
 nnoremap <Leader>3 :buffers<CR>:buffer<Space>
 nnoremap <Leader>4 :bnext<CR>
@@ -142,6 +143,8 @@ let g:airline_theme='adaptive'
 " for snow theme
 highlight VertSplit guifg=#363A3E guibg=#363A3E
 highlight LineNr guibg=#363A3E
+highlight StatusLine guifg=#363A3E guibg=#AFB7C0
+highlight WildMenu guifg=#759ABD
 highlight SignColumn guibg=#363A3E
 highlight CursorLineNr guifg=#759ABD guibg=#363A3E
 highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
@@ -149,6 +152,8 @@ highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
 " for cosmic latte theme
 " highlight VertSplit guifg=#2B3740 guibg=#2B3740
 " highlight LineNr guibg=#2B3740
+" highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
+" highlight WildMenu guifg=#5496BD
 " highlight SignColumn guibg=#2B3740
 " highlight CursorLineNr guifg=#5496BD guibg=#2B3740
 " highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
@@ -169,6 +174,22 @@ vnoremap <C-l> >gv
 " explorer settings
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+let g:NetrwIsOpen=0
+fun! ToggleNetrw()
+ if g:NetrwIsOpen
+  let i = bufnr("$")
+  while (i >= 1)
+   if (getbufvar(i, "&filetype") == "netrw")
+    silent exe "bwipeout " . i
+   endif
+   let i-=1
+  endwhile
+  let g:NetrwIsOpen=0
+ else
+  let g:NetrwIsOpen=1
+  silent Lexplore
+ endif
+endfun
 
 " trim all trailing whitespace (when exiting insert mode)
 fun! TrimWhitespace()
@@ -183,9 +204,9 @@ if &term =~ "xterm.*"
  let &t_ti = &t_ti . "\e[?2004h"
  let &t_te = "\e[?2004l" . &t_te
  fun XTermPasteBegin(ret)
-   set pastetoggle=<Esc>[201~
-   set paste
-   return a:ret
+  set pastetoggle=<Esc>[201~
+  set paste
+  return a:ret
  endfun
  map <expr> <Esc>[200~ XTermPasteBegin("i")
  imap <expr> <Esc>[200~ XTermPasteBegin("")
