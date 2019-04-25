@@ -132,30 +132,30 @@ if (has("termguicolors"))
   set termguicolors
 endif
 set background=dark
-colorscheme snow
+colorscheme cosmic_latte
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
 " fxes colors for snow theme
-highlight VertSplit guifg=#363A3E guibg=#363A3E
-highlight LineNr guibg=#363A3E
-highlight StatusLine guifg=#363A3E guibg=#AFB7C0
-highlight WildMenu guifg=#759ABD
-highlight SignColumn guibg=#363A3E
-highlight CursorLineNr guifg=#759ABD guibg=#363A3E
-highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
-highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
-highlight TabLineSel guifg=#363A3E guibg=#759ABD
+" highlight VertSplit guifg=#363A3E guibg=#363A3E
+" highlight LineNr guibg=#363A3E
+" highlight StatusLine guifg=#363A3E guibg=#AFB7C0
+" highlight WildMenu guifg=#759ABD
+" highlight SignColumn guibg=#363A3E
+" highlight CursorLineNr guifg=#759ABD guibg=#363A3E
+" highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
+" highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
+" highlight TabLineSel guifg=#363A3E guibg=#759ABD
 " fixes colors for cosmic latte theme
-" highlight VertSplit guifg=#2B3740 guibg=#2B3740
-" highlight LineNr guibg=#2B3740
-" highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
-" highlight WildMenu guifg=#5496BD
-" highlight SignColumn guibg=#2B3740
-" highlight CursorLineNr guifg=#5496BD guibg=#2B3740
-" highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
-" highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
-" highlight TabLineSel guifg=#2B3740 guibg=#5496BD
+highlight VertSplit guifg=#2B3740 guibg=#2B3740
+highlight LineNr guibg=#2B3740
+highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
+highlight WildMenu guifg=#5496BD
+highlight SignColumn guibg=#2B3740
+highlight CursorLineNr guifg=#5496BD guibg=#2B3740
+highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
+highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
+highlight TabLineSel guifg=#2B3740 guibg=#5496BD
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
