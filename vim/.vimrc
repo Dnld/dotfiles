@@ -145,6 +145,7 @@ highlight SignColumn guibg=#363A3E
 highlight CursorLineNr guifg=#759ABD guibg=#363A3E
 highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
 highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
+highlight TabLineSel guifg=#363A3E guibg=#759ABD
 " fixes colors for cosmic latte theme
 " highlight VertSplit guifg=#2B3740 guibg=#2B3740
 " highlight LineNr guibg=#2B3740
@@ -154,6 +155,7 @@ highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
 " highlight CursorLineNr guifg=#5496BD guibg=#2B3740
 " highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
 " highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
+" highlight TabLineSel guifg=#2B3740 guibg=#5496BD
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
