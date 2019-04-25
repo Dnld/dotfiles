@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 23, 2019
+" Updated April 25, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -69,9 +69,6 @@ autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode noruler
 
-" prevent excessive cpu usage by Git Gutter
-let g:gitgutter_async = 0
-
 " NERDComToggleComment shortcut and configuration
 nnoremap ' :call NERDComment(0,"toggle")<CR>
 vnoremap ' :call NERDComment(0,"toggle")<CR>
@@ -84,6 +81,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " general settings
 set formatoptions=tcroql
+set cb=unnamed
 inoremap jj <Esc>
 let mapleader = "\<Space>"
 set guicursor=
@@ -110,7 +108,7 @@ set nowritebackup
 set noswapfile
 
 " search
-nnoremap , :noh<CR><CR>
+nnoremap , :noh<CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " bind R to r for replace mode
@@ -120,16 +118,14 @@ nnoremap r R
 " nnoremap <Leader>1 :Explore<CR>
 nnoremap <Leader>1 :call ToggleNetrw()<CR>
 nnoremap <Leader>2 :FZF<CR>
-nnoremap <Leader>3 :buffers<CR>:buffer<Space>
-nnoremap <Leader>4 :bnext<CR>
-nnoremap <Leader>5 :bprevious<CR>
-nnoremap <Leader>6 :bd<CR>
-nnoremap <Leader>7 :new<CR>
-nnoremap <Leader>8 :vnew<CR>
-nnoremap <Leader>9 <C-W>h
-nnoremap <Leader>0 <C-W>j
-nnoremap <Leader>- <C-W>k
-nnoremap <Leader>= <C-W>l
+nnoremap <Leader>h :buffers<CR>:buffer<Space>
+nnoremap <Leader>j :bnext<CR>
+nnoremap <Leader>k :bprevious<CR>
+nnoremap <Leader>l :bd<CR>
+nnoremap <Leader>y <C-W>h
+nnoremap <Leader>u <C-W>j
+nnoremap <Leader>i <C-W>k
+nnoremap <Leader>o <C-W>l
 
 " colors, theme, font
 if (has("termguicolors"))
@@ -140,7 +136,7 @@ colorscheme snow
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
-" for snow theme
+" fxes colors for snow theme
 highlight VertSplit guifg=#363A3E guibg=#363A3E
 highlight LineNr guibg=#363A3E
 highlight StatusLine guifg=#363A3E guibg=#AFB7C0
@@ -149,7 +145,7 @@ highlight SignColumn guibg=#363A3E
 highlight CursorLineNr guifg=#759ABD guibg=#363A3E
 highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
 highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
-" for cosmic latte theme
+" fixes colors for cosmic latte theme
 " highlight VertSplit guifg=#2B3740 guibg=#2B3740
 " highlight LineNr guibg=#2B3740
 " highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
