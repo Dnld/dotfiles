@@ -1,5 +1,5 @@
 # bash profile
-# updated March 25, 2019
+# updated April 26, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -7,10 +7,10 @@
 # paths
 
 # prompt
-export PS1="\[\033[38;5;242m\]\W\$(parse_git_branch) $\[\033[0m\] "
+export PS1="\e[36m\W\$(markup_git_branch \$(parse_git_branch)) \e[36m$\e[0m "
 
 # default editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # environment shortcuts
 alias c="clear"
@@ -29,14 +29,14 @@ alias pc="pbcopy"
 alias pp="pbpaste"
 alias rm="rm -iv"
 alias t="touch"
-alias v="vim"
+alias v="nvim"
 function ts() {
   touch "$1"
   sublime "$1"
 }
 function tv() {
   touch "$1"
-  vim "$1"
+  nvim "$1"
 }
 function cdf() {
   currFolderPath=$( /usr/bin/osascript <<EOT
@@ -62,15 +62,16 @@ function pwdc() {
 }
 
 # dotfiles
-alias bp="vim ~/.bash_profile"
+alias bp="nvim ~/.bash_profile"
 alias rbp="source ~/.bash_profile"
 alias rtc="tmux source ~/.tmux.conf"
-alias vrc="vim ~/.vimrc"
-alias vtc="vim ~/.tmux.conf"
+alias vrc="nvim ~/.vimrc"
+alias vtc="nvim ~/.tmux.conf"
 
 # navigation
 alias desk="cd ~/Desktop"
 alias dev="cd ~/Documents/development"
+alias devg="cd ~/go/src/github.com/Dnld"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
 
@@ -135,9 +136,18 @@ alias ttk="tmux kill-server"
 alias ttl="tmux ls"
 alias ttn="tmux new -s "
 
-# git branch in prompt
+# git branch in prompt, colored red if dirty
 function parse_git_branch() {
-  git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ (\1)/"
+ git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ \1/"
+}
+markup_git_branch() {
+ if [[ -n $@ ]]; then
+   if [[ -z $(git status --porcelain 2> /dev/null) ]]; then
+     echo -e " \e[36m\002($@)\e[0m"
+   else
+     echo -e " \e[31m\002($@)\e[0m"
+   fi
+ fi
 }
 
 # node path
