@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 25, 2019
+" Updated April 26, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -14,7 +14,6 @@ Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
