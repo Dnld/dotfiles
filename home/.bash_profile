@@ -5,6 +5,9 @@
 ################################################################################
 
 # paths
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=~/go
 
 # prompt
 export PS1="\e[36m\W\$(markup_git_branch \$(parse_git_branch)) \e[36m$\e[0m "
