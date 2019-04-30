@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 26, 2019
+" Updated April 30, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -33,6 +33,12 @@ let g:airline_right_alt_sep = '|'
 let g:airline_section_y = '%3p%%'
 let g:airline_section_z = '%3l %2v'
 let g:airline#extensions#ale#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Ale
 let g:ale_lint_on_text_changed = 'never'
@@ -125,7 +131,6 @@ nnoremap <Leader>y <C-W>h
 nnoremap <Leader>u <C-W>j
 nnoremap <Leader>i <C-W>k
 nnoremap <Leader>o <C-W>l
-
 " colors, theme, font
 if (has("termguicolors"))
   set termguicolors
@@ -134,6 +139,7 @@ set background=dark
 colorscheme cosmic_latte
 set guifont=Source\ Code\ Pro:h13
 syntax enable
+
 let g:airline_theme='adaptive'
 " fxes colors for snow theme
 " highlight VertSplit guifg=#363A3E guibg=#363A3E
