@@ -36,8 +36,6 @@ let g:airline#extensions#ale#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-
-" Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Ale
