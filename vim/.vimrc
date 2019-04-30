@@ -155,7 +155,7 @@ let g:airline_theme='adaptive'
 highlight VertSplit guifg=#2B3740 guibg=#2B3740
 highlight LineNr guibg=#2B3740
 highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
-highlight WildMenu guifg=#5496BD
+highlight WildMenu guifg=#2B3740 guibg=#5496BD
 highlight SignColumn guibg=#2B3740
 highlight CursorLineNr guifg=#5496BD guibg=#2B3740
 highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
