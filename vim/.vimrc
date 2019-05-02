@@ -12,6 +12,7 @@ Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'mxw/vim-jsx'
 Plug 'nightsense/cosmic_latte'
+Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
@@ -138,22 +139,53 @@ nnoremap <Leader>o <C-W>l
 if (has("termguicolors"))
   set termguicolors
 endif
-set background=dark
-colorscheme cosmic_latte
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
-
-" tweaks colors for cosmic latte theme
-highlight VertSplit guifg=#2B3740 guibg=#2B3740
-highlight LineNr guibg=#2B3740
-highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
-highlight WildMenu guifg=#2B3740 guibg=#5496BD
-highlight SignColumn guibg=#2B3740
-highlight CursorLineNr guifg=#5496BD guibg=#2B3740
-highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
-highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
-highlight TabLineSel guifg=#2B3740 guibg=#5496BD
+" dark cosmic latte theme
+fun DarkLatte()
+ colorscheme cosmic_latte
+ set background=dark
+ highlight VertSplit guifg=#2B3740 guibg=#2B3740
+ highlight LineNr guibg=#2B3740
+ highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
+ highlight WildMenu guifg=#2B3740 guibg=#5496BD
+ highlight SignColumn guibg=#2B3740
+ highlight CursorLineNr guifg=#5496BD guibg=#2B3740
+ highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
+ highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
+ highlight TabLineSel guifg=#2B3740 guibg=#5496BD
+endfun
+" tweaks colors for light cosmic latte theme
+fun LightLatte()
+ colorscheme cosmic_latte
+ set background=light
+ highlight VertSplit guifg=#EFE4D2 guibg=#EFE4D2
+ highlight LineNr guibg=#EFE4D2
+ highlight StatusLine guifg=#EFE4D2 guibg=#485A62
+ highlight WildMenu guifg=#EFE4D2 guibg=#0075C9
+ highlight SignColumn guibg=#EFE4D2
+ highlight CursorLineNr guifg=#0075C9 guibg=#EFE4D2
+ highlight ALEErrorSign guifg=#FF0056 guibg=#EFE4D2
+ highlight ALEWarningSign guifg=#916D03 guibg=#EFE4D2
+ highlight TabLineSel guifg=#EFE4D2 guibg=#0075C9
+endfun
+" tweaks colors for snow theme
+fun Snow()
+ colorscheme snow
+ set background=dark
+ highlight VertSplit guifg=#363A3E guibg=#363A3E
+ highlight LineNr guibg=#363A3E
+ highlight StatusLine guifg=#363A3E guibg=#AFB7C0
+ highlight WildMenu guifg=#759ABD
+ highlight SignColumn guibg=#363A3E
+ highlight CursorLineNr guifg=#759ABD guibg=#363A3E
+ highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
+ highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
+ highlight TabLineSel guifg=#363A3E guibg=#759ABD
+endfun
+" default to snow theme
+call Snow()
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
@@ -179,6 +211,7 @@ fun! TrimWhitespace()
  call winrestview(l:save)
 endfun
 autocmd BufWritePre * :call TrimWhitespace()
+
 
 " better pasting on a Mac
 if &term =~ "xterm.*"
