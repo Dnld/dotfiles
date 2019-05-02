@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 30, 2019
+" Updated May 2, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -10,10 +10,10 @@ Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
+Plug 'mxw/vim-jsx'
 Plug 'nightsense/cosmic_latte'
-Plug 'nightsense/snow'
-Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
@@ -79,16 +79,20 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 
+" NERDTree
+let NERDTreeMinimalUI = 1
+let NERDTreeShowHidden = 1
+
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
-" general settings
+" general config
 set formatoptions=tcroql
 set cb=unnamed
 inoremap jj <Esc>
-let mapleader = "\<Space>"
 set guicursor=
 set number
+let mapleader = "\<Space>"
 set relativenumber
 set tabstop=4
 set shiftwidth=4
@@ -118,9 +122,9 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 nnoremap r R
 
 " file navigation, window management
-" nnoremap <Leader>1 :Explore<CR>
-nnoremap <Leader>1 :call ToggleNetrw()<CR>
+nnoremap <Leader>1 :NERDTreeToggle<CR>
 nnoremap <Leader>2 :FZF<CR>
+nnoremap <Leader>3 :Ag<CR>
 nnoremap <Leader>h :buffers<CR>:buffer<Space>
 nnoremap <Leader>j :bnext<CR>
 nnoremap <Leader>k :bprevious<CR>
@@ -129,6 +133,7 @@ nnoremap <Leader>y <C-W>h
 nnoremap <Leader>u <C-W>j
 nnoremap <Leader>i <C-W>k
 nnoremap <Leader>o <C-W>l
+
 " colors, theme, font
 if (has("termguicolors"))
   set termguicolors
@@ -137,19 +142,9 @@ set background=dark
 colorscheme cosmic_latte
 set guifont=Source\ Code\ Pro:h13
 syntax enable
-
 let g:airline_theme='adaptive'
-" fxes colors for snow theme
-" highlight VertSplit guifg=#363A3E guibg=#363A3E
-" highlight LineNr guibg=#363A3E
-" highlight StatusLine guifg=#363A3E guibg=#AFB7C0
-" highlight WildMenu guifg=#759ABD
-" highlight SignColumn guibg=#363A3E
-" highlight CursorLineNr guifg=#759ABD guibg=#363A3E
-" highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
-" highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
-" highlight TabLineSel guifg=#363A3E guibg=#759ABD
-" fixes colors for cosmic latte theme
+
+" tweaks colors for cosmic latte theme
 highlight VertSplit guifg=#2B3740 guibg=#2B3740
 highlight LineNr guibg=#2B3740
 highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
@@ -176,21 +171,6 @@ vnoremap <C-l> >gv
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:NetrwIsOpen=0
-fun! ToggleNetrw()
- if g:NetrwIsOpen
-  let i = bufnr("$")
-  while (i >= 1)
-   if (getbufvar(i, "&filetype") == "netrw")
-    silent exe "bwipeout " . i
-   endif
-   let i-=1
-  endwhile
-  let g:NetrwIsOpen=0
- else
-  let g:NetrwIsOpen=1
-  silent Lexplore
- endif
-endfun
 
 " trim all trailing whitespace (when exiting insert mode)
 fun! TrimWhitespace()
