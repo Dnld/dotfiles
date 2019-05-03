@@ -212,7 +212,6 @@ fun! TrimWhitespace()
 endfun
 autocmd BufWritePre * :call TrimWhitespace()
 
-
 " better pasting on a Mac
 if &term =~ "xterm.*"
  let &t_ti = &t_ti . "\e[?2004h"
