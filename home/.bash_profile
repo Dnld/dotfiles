@@ -1,13 +1,14 @@
 # bash profile
-# updated April 26, 2019
+# updated May 3, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
 
 # paths
-export GOROOT=/usr/local/go
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-export GOPATH=~/go
 
 # prompt
 export PS1="\e[36m\W\$(markup_git_branch \$(parse_git_branch)) \e[36m$\e[0m "
