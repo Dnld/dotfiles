@@ -91,9 +91,9 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 set formatoptions=tcroql
 set cb=unnamed
 inoremap jj <Esc>
+let mapleader = "\<Space>"
 set guicursor=
 set number
-let mapleader = "\<Space>"
 set relativenumber
 set tabstop=4
 set shiftwidth=4
@@ -142,7 +142,7 @@ endif
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
-" dark cosmic latte theme
+" tweaks colors for dark cosmic latte theme
 fun DarkLatte()
  colorscheme cosmic_latte
  set background=dark
