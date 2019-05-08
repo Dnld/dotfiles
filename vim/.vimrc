@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 2, 2019
+" Updated May 8, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -126,14 +126,10 @@ nnoremap r R
 nnoremap <Leader>1 :NERDTreeToggle<CR>
 nnoremap <Leader>2 :FZF<CR>
 nnoremap <Leader>3 :Ag<CR>
-nnoremap <Leader>h :buffers<CR>:buffer<Space>
+nnoremap <Leader>h <C-W>w
 nnoremap <Leader>j :bnext<CR>
 nnoremap <Leader>k :bprevious<CR>
 nnoremap <Leader>l :bd<CR>
-nnoremap <Leader>y <C-W>h
-nnoremap <Leader>u <C-W>j
-nnoremap <Leader>i <C-W>k
-nnoremap <Leader>o <C-W>l
 
 " colors, theme, font
 if (has("termguicolors"))
