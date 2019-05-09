@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 8, 2019
+" Updated May 9, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -94,7 +94,6 @@ inoremap jj <Esc>
 let mapleader = "\<Space>"
 set guicursor=
 set number
-set relativenumber
 set tabstop=4
 set shiftwidth=4
 set smartindent
