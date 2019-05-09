@@ -56,7 +56,7 @@ let g:auto_save_in_insert_mode = 0
 " fzf
 set rtp+=/usr/local/opt/fzf
 let g:fzf_colors =
- \ { 'fg':      ['fg', 'Normal'],
+ \ {'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
   \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
@@ -68,7 +68,7 @@ let g:fzf_colors =
   \ 'pointer': ['fg', 'Exception'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+  \ 'header':  ['fg', 'Comment']}
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode noruler
