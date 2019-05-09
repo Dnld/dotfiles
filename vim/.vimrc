@@ -121,6 +121,9 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 " bind R to r for replace mode
 nnoremap r R
 
+" reload buffers
+nnoremap <C-b> :bufdo e<CR>
+
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
 nnoremap <Leader>2 :FZF<CR>
