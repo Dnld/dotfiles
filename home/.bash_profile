@@ -1,5 +1,5 @@
 # bash profile
-# updated May 3, 2019
+# updated May 10, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -119,6 +119,9 @@ alias got="git"
 
 # open ports
 alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
+
+# go
+alias grm="go run main.go"
 
 # node
 alias nn="node"
