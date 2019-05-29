@@ -7142,7 +7142,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>220 217 937 514 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1021 549 650 469 0 0 1680 1050 </string>
+	<string>1021 564 650 454 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>125 523 650 494 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -10572,7 +10572,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{352, 784}</string>
+		<string>{102, 940}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -10581,7 +10581,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4F7B275C-3542-4897-9981-2CFF09AEB88F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>20</integer>
+	<integer>22</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -11107,6 +11107,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
@@ -11148,6 +11150,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/djs/Dropbox (Good Uncle)/don/development/dotfiles/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>

@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 9, 2019
+" Updated May 29, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -33,6 +33,8 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = '|'
 let g:airline_section_y = '%3p%%'
 let g:airline_section_z = '%3l %2v'
+let g:airline_section_warning = ''
+let g:airline_section_error = ''
 let g:airline#extensions#ale#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
