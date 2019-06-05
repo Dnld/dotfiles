@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 29, 2019
+" Updated June 5, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -11,7 +11,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'mxw/vim-jsx'
-Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -142,36 +141,8 @@ endif
 set guifont=Source\ Code\ Pro:h13
 syntax enable
 let g:airline_theme='adaptive'
-" tweaks colors for dark cosmic latte theme
-fun DarkLatte()
- colorscheme cosmic_latte
- set background=dark
- highlight VertSplit guifg=#2B3740 guibg=#2B3740
- highlight LineNr guibg=#2B3740
- highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
- highlight WildMenu guifg=#2B3740 guibg=#5496BD
- highlight SignColumn guibg=#2B3740
- highlight CursorLineNr guifg=#5496BD guibg=#2B3740
- highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
- highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
- highlight TabLineSel guifg=#2B3740 guibg=#5496BD
-endfun
-" tweaks colors for light cosmic latte theme
-fun LightLatte()
- colorscheme cosmic_latte
- set background=light
- highlight VertSplit guifg=#EFE4D2 guibg=#EFE4D2
- highlight LineNr guibg=#EFE4D2
- highlight StatusLine guifg=#EFE4D2 guibg=#485A62
- highlight WildMenu guifg=#EFE4D2 guibg=#0075C9
- highlight SignColumn guibg=#EFE4D2
- highlight CursorLineNr guifg=#0075C9 guibg=#EFE4D2
- highlight ALEErrorSign guifg=#FF0056 guibg=#EFE4D2
- highlight ALEWarningSign guifg=#916D03 guibg=#EFE4D2
- highlight TabLineSel guifg=#EFE4D2 guibg=#0075C9
-endfun
-" tweaks colors for snow theme
-fun Snow()
+" tweaks colors for dark snow theme
+fun Dark()
  colorscheme snow
  set background=dark
  highlight VertSplit guifg=#363A3E guibg=#363A3E
@@ -184,8 +155,22 @@ fun Snow()
  highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
  highlight TabLineSel guifg=#363A3E guibg=#759ABD
 endfun
-" default to snow theme
-call Snow()
+" tweaks colors for Light snow theme
+fun Light()
+ colorscheme snow
+ set background=light
+ highlight VertSplit guifg=#E5EBF1 guibg=#E5EBF1
+ highlight LineNr guibg=#E5EBF1
+ highlight StatusLine guifg=#E5EBF1 guibg=#535C65
+ highlight WildMenu guifg=#2B7AB2
+ highlight SignColumn guibg=#E5EBF1
+ highlight CursorLineNr guifg=#2B7AB2 guibg=#E5EBF1
+ highlight ALEErrorSign guifg=#AE5865 guibg=#E5EBF1
+ highlight ALEWarningSign guifg=#906C33 guibg=#E5EBF1
+ highlight TabLineSel guifg=#E5EBF1 guibg=#2B7AB2
+endfun
+" default to dark snow theme
+call Dark()
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
