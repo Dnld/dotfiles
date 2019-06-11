@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated June 5, 2019
+" Updated June 11, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'mxw/vim-jsx'
+Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -154,9 +155,10 @@ fun Dark()
  highlight ALEErrorSign guifg=#BE868C guibg=#363A3E
  highlight ALEWarningSign guifg=#AB916D guibg=#363A3E
  highlight TabLineSel guifg=#363A3E guibg=#759ABD
+ highlight Visual guifg=#759ABD guibg=#2C2D30 gui=none
 endfun
-" tweaks colors for Light snow theme
-fun Light()
+" tweaks colors for light snow theme
+fun LightSnow()
  colorscheme snow
  set background=light
  highlight VertSplit guifg=#E5EBF1 guibg=#E5EBF1
@@ -168,6 +170,37 @@ fun Light()
  highlight ALEErrorSign guifg=#AE5865 guibg=#E5EBF1
  highlight ALEWarningSign guifg=#906C33 guibg=#E5EBF1
  highlight TabLineSel guifg=#E5EBF1 guibg=#2B7AB2
+ highlight Visual guifg=#2B7AB2 guibg=#FBFFFF gui=none
+endfun
+" tweaks colors for dark cosmic latte theme
+fun DarkLatte()
+ colorscheme cosmic_latte
+ set background=dark
+ highlight VertSplit guifg=#2B3740 guibg=#2B3740
+ highlight LineNr guibg=#2B3740
+ highlight StatusLine guifg=#2B3740 guibg=#ABB0C0
+ highlight WildMenu guifg=#2B3740 guibg=#5496BD
+ highlight SignColumn guibg=#2B3740
+ highlight CursorLineNr guifg=#5496BD guibg=#2B3740
+ highlight ALEErrorSign guifg=#C17B8D guibg=#2B3740
+ highlight ALEWarningSign guifg=#B28761 guibg=#2B3740
+ highlight TabLineSel guifg=#2B3740 guibg=#5496BD
+ highlight Visual guibg=#5496BD guifg=#202A31 gui=none
+endfun
+" tweaks colors for light cosmic latte theme
+fun Light()
+ colorscheme cosmic_latte
+ set background=light
+ highlight VertSplit guifg=#EFE4D2 guibg=#EFE4D2
+ highlight LineNr guibg=#EFE4D2
+ highlight StatusLine guifg=#EFE4D2 guibg=#485A62
+ highlight WildMenu guifg=#EFE4D2 guibg=#0075C9
+ highlight SignColumn guibg=#EFE4D2
+ highlight CursorLineNr guifg=#0075C9 guibg=#EFE4D2
+ highlight ALEErrorSign guifg=#FF0056 guibg=#EFE4D2
+ highlight ALEWarningSign guifg=#916D03 guibg=#EFE4D2
+ highlight TabLineSel guifg=#EFE4D2 guibg=#0075C9
+ highlight Visual guibg=#0075C9 guifg=#FFF8E7 gui=none
 endfun
 " default to dark snow theme
 call Dark()
