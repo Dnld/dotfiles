@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated June 11, 2019
+" Updated June 12, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -203,7 +203,7 @@ fun Light()
  highlight Visual guibg=#0075C9 guifg=#FFF8E7 gui=none
 endfun
 " default to dark snow theme
-call Dark()
+call Light()
 
 " move line or selection up, down, left, right
 nnoremap <C-k> :m .-2<CR>==
