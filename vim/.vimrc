@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated June 18, 2019
+" Updated June 20, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
