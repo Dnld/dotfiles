@@ -30,8 +30,6 @@
 	<string>0.87258 0.841513 0.769773 0.5</string>
 	<key>DVTDebuggerInstructionPointerColor</key>
 	<string>0.0541487 0.425949 0.466619 1</string>
-	<key>DVTFontAndColorVersion</key>
-	<integer>1</integer>
 	<key>DVTLineSpacing</key>
 	<real>1.1000000238418579</real>
 	<key>DVTMarkupTextBackgroundColor</key>
@@ -108,10 +106,6 @@
 		<string>0.318042 0.382658 0.42047 1</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
 		<string>0.318042 0.382658 0.42047 1</string>
-		<key>xcode.syntax.declaration.other</key>
-		<string>0.0447783 0.37105 0.739368 1</string>
-		<key>xcode.syntax.declaration.type</key>
-		<string>0.0447783 0.37105 0.739368 1</string>
 		<key>xcode.syntax.identifier.class</key>
 		<string>0.0447783 0.37105 0.739368 1</string>
 		<key>xcode.syntax.identifier.class.system</key>
@@ -137,10 +131,6 @@
 		<key>xcode.syntax.identifier.variable.system</key>
 		<string>0.0447783 0.37105 0.739368 1</string>
 		<key>xcode.syntax.keyword</key>
-		<string>0.557921 0.231074 0.619079 1</string>
-		<key>xcode.syntax.mark</key>
-		<string>0.318042 0.382658 0.42047 1</string>
-		<key>xcode.syntax.markup.code</key>
 		<string>0.557921 0.231074 0.619079 1</string>
 		<key>xcode.syntax.number</key>
 		<string>0.492763 0.354497 0.0309474 1</string>
@@ -165,10 +155,6 @@
 		<string>SourceCodePro-Regular - 13.0</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
 		<string>SourceCodePro-Regular - 13.0</string>
-		<key>xcode.syntax.declaration.other</key>
-		<string>SourceCodePro-Regular - 13.0</string>
-		<key>xcode.syntax.declaration.type</key>
-		<string>SourceCodePro-Regular - 13.0</string>
 		<key>xcode.syntax.identifier.class</key>
 		<string>SourceCodePro-Regular - 13.0</string>
 		<key>xcode.syntax.identifier.class.system</key>
@@ -194,10 +180,6 @@
 		<key>xcode.syntax.identifier.variable.system</key>
 		<string>SourceCodePro-Regular - 13.0</string>
 		<key>xcode.syntax.keyword</key>
-		<string>SourceCodePro-Regular - 13.0</string>
-		<key>xcode.syntax.mark</key>
-		<string>SourceCodePro-Regular - 13.0</string>
-		<key>xcode.syntax.markup.code</key>
 		<string>SourceCodePro-Regular - 13.0</string>
 		<key>xcode.syntax.number</key>
 		<string>SourceCodePro-Regular - 13.0</string>
