@@ -636,7 +636,7 @@ Modified by Donald Steinert.
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#485A62</string>
+                <string>#63757E</string>
             </dict>
         </dict>
         <dict>
@@ -759,7 +759,7 @@ Modified by Donald Steinert.
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#485A62</string>
+                <string>#63757E</string>
             </dict>
         </dict>
         <dict>
@@ -1174,7 +1174,7 @@ Modified by Donald Steinert.
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>#485A62</string>
+                <string>#63757E</string>
             </dict>
         </dict>
         <dict>
@@ -1802,7 +1802,7 @@ Modified by Donald Steinert.
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>#485A62</string>
+                <string>#63757E</string>
             </dict>
         </dict>
         <dict>
@@ -1815,7 +1815,7 @@ Modified by Donald Steinert.
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>#485A62</string>
+                <string>#63757E</string>
             </dict>
         </dict>
         <dict>
@@ -1848,7 +1848,7 @@ Modified by Donald Steinert.
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#485A62</string>
+                <string>#63757E</string>
             </dict>
         </dict>
         <dict>
