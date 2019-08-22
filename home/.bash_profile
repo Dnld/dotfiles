@@ -1,22 +1,22 @@
 # bash profile
-# updated May 10, 2019
+# updated August 22, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
 
 # paths
-export GOPATH=$HOME/Go
-export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=/Users/djs/go
+export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+export PATH=$PATH:/Users/djs/Library/Android/sdk/platform-tools/
+export PATH=/Users/espireinfolabs/Desktop/soft/android-sdk-mac_x86/platform-tools:$PATH
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 
 # prompt
-export PS1="\e[36m\W\$(markup_git_branch \$(parse_git_branch)) \e[36m$\e[0m "
-
+export PS1="\[\e[0;36m\]\W \[\e[0;36m\]$ \[\e[0m\]"
+#
 # default editor
-export EDITOR=nvim
+export EDITOR=vim
 
-# environment shortcuts
 alias c="clear"
 alias c-="cd -"
 alias cd..="cd ../"
@@ -33,14 +33,14 @@ alias pc="pbcopy"
 alias pp="pbpaste"
 alias rm="rm -iv"
 alias t="touch"
-alias v="nvim"
+alias v="vim"
 function ts() {
   touch "$1"
   sublime "$1"
 }
 function tv() {
   touch "$1"
-  nvim "$1"
+  vim "$1"
 }
 function cdf() {
   currFolderPath=$( /usr/bin/osascript <<EOT
@@ -66,18 +66,23 @@ function pwdc() {
 }
 
 # dotfiles
-alias bp="nvim ~/.bash_profile"
+alias bp="vim ~/.bash_profile"
 alias rbp="source ~/.bash_profile"
 alias rtc="tmux source ~/.tmux.conf"
-alias vrc="nvim ~/.vimrc"
-alias vtc="nvim ~/.tmux.conf"
+alias vrc="vim ~/.vimrc"
+alias vtc="vim ~/.tmux.conf"
 
 # navigation
+alias db="cd ~/Dropbox\ \(Good\ Uncle\)/don"
 alias desk="cd ~/Desktop"
-alias dev="cd ~/Documents/development"
-alias devg="cd ~/go/src/github.com/Dnld"
+alias dev="cd ~/Dropbox\ \(Good\ Uncle\)/don/development/"
+alias devg="cd ~/go/src/github.com/goodunclefood"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
+alias gpth="cd /Users/djs/go"
+
+# get all tasks
+alias tasks='git grep -EI "TODO|FIXME"'
 
 # git
 alias ga="git add"
@@ -102,6 +107,7 @@ alias gpl="git pull"
 alias gpo="git push origin"
 alias gpod="git push origin development"
 alias gpom="git push origin master"
+alias gpos="git push origin staging"
 alias gpu="git push"
 alias gpuf="git push -f"
 alias gpr="git pull --rebase"
@@ -145,20 +151,19 @@ alias ttn="tmux new -s "
 
 # git branch in prompt, colored red if dirty
 function parse_git_branch() {
- git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ \1/"
+    git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ \1/"
 }
-markup_git_branch() {
+function markup_git_branch() {
  if [[ -n $@ ]]; then
    if [[ -z $(git status --porcelain 2> /dev/null) ]]; then
-     echo -e " \e[36m\002($@)\e[0m"
+     echo -e " \[\e[0;36m\]($@)"
    else
-     echo -e " \e[31m\002($@)\e[0m"
+     echo -e " \[\e[0;31m\]($@)"
    fi
  fi
 }
 
-# node path
-export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+# Android_Home Environment Variable
+export ANDROID_HOME=~/Library/Android/sdk
 
 ################################################################################
-
