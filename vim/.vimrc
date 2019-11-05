@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated June 20, 2019
+" Updated November 5, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -8,9 +8,12 @@ call plug#begin('~/.vim/plugged')
 " plugins
 Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
+Plug 'slashmili/alchemist.vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
-Plug 'mxw/vim-jsx'
+Plug 'mhinz/vim-mix-format'
 Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
@@ -19,7 +22,6 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
-
 " Plug end
 call plug#end()
 
@@ -49,6 +51,7 @@ let g:ale_set_highlights = 0
 let g:ale_change_sign_column_color = 0
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
+let g:ale_sign_info = '•'
 
 " Autosave settings
 let g:auto_save = 1
@@ -75,6 +78,10 @@ autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode noruler
 
+" mix format
+let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
+
 " NERDComToggleComment shortcut and configuration
 nnoremap ' :call NERDComment(0,"toggle")<CR>
 vnoremap ' :call NERDComment(0,"toggle")<CR>
@@ -88,6 +95,9 @@ let NERDTreeShowHidden = 1
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
 
 " general config
 set formatoptions=tcroql
