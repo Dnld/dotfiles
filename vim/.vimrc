@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated November 5, 2019
+" Updated November 13, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -18,6 +18,7 @@ Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
@@ -92,6 +93,13 @@ let g:NERDDefaultAlign = 'left'
 " NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
+
+" Vim Multiple Cursors
+let g:multi_cursor_start_word_key = '<C-m>'
+let g:multi_cursor_select_all_word_key = '<A-m>'
+let g:multi_cursor_start_key           = 'g<C-m>'
+let g:multi_cursor_select_all_key      = 'g<A-m>'
+let g:multi_cursor_next_key            = '<C-m>'
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
