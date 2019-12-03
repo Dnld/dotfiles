@@ -1,5 +1,5 @@
 # bash profile
-# updated August 22, 2019
+# updated December 3, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -149,19 +149,9 @@ alias ttk="tmux kill-server"
 alias ttl="tmux ls"
 alias ttn="tmux new -s "
 
-# git branch in prompt, colored red if dirty
-function parse_git_branch() {
-    git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ \1/"
-}
-function markup_git_branch() {
- if [[ -n $@ ]]; then
-   if [[ -z $(git status --porcelain 2> /dev/null) ]]; then
-     echo -e " \[\e[0;36m\]($@)"
-   else
-     echo -e " \[\e[0;31m\]($@)"
-   fi
- fi
-}
+# GU restarts
+alias restart-production="aws ecs update-service --force-new-deployment --cluster ecs-production --service "
+alias restart-staging="aws ecs update-service --force-new-deployment --cluster ecs-staging --service "
 
 # Android_Home Environment Variable
 export ANDROID_HOME=~/Library/Android/sdk
