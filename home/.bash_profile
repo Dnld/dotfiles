@@ -1,5 +1,5 @@
 # bash profile
-# updated December 3, 2019
+# updated December 4, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -136,6 +136,8 @@ alias nn="node"
 # python
 alias python="python3"
 alias python2="python2"
+alias venva="python -m venv env && source env/bin/activate"
+alias venvd="deactivate"
 
 # sublime
 alias s="sublime"
