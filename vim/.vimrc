@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated November 13, 2019
+" Updated December 6, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -23,6 +23,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
+
 " Plug end
 call plug#end()
 
@@ -133,6 +134,7 @@ set mouse=a
 set nobackup
 set nowritebackup
 set noswapfile
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 " search
 nnoremap , :noh<CR>
