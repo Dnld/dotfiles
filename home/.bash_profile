@@ -1,15 +1,20 @@
 # bash profile
-# updated December 4, 2019
+# updated December 11, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
 
 # paths
 export GOPATH=/Users/djs/go
-export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 export PATH=$PATH:/Users/djs/Library/Android/sdk/platform-tools/
 export PATH=/Users/espireinfolabs/Desktop/soft/android-sdk-mac_x86/platform-tools:$PATH
 export PATH=$PATH:$GOPATH/bin
+
+# Node stuff
+npm set prefix ~/.npm
+PATH="$HOME/.npm/bin:$PATH"
+PATH="./node_modules/.bin:$PATH"
+export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
 # prompt
 export PS1="\[\e[0;36m\]\W \[\e[0;36m\]$ \[\e[0m\]"
@@ -74,9 +79,8 @@ alias vrc="vim ~/.vimrc"
 alias vtc="vim ~/.tmux.conf"
 
 # navigation
-alias db="cd ~/Dropbox\ \(Good\ Uncle\)/don"
 alias desk="cd ~/Desktop"
-alias dev="cd ~/Dropbox\ \(Good\ Uncle\)/don/development/"
+alias dev="cd ~/Documents/development"
 alias devg="cd ~/go/src/github.com/goodunclefood"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
