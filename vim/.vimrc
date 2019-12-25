@@ -1,8 +1,8 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
 " Updated December 25, 2019
-
 " Plug begin
+
 call plug#begin('~/.vim/plugged')
 
 " plugins
@@ -67,8 +67,8 @@ set rtp+=/usr/local/opt/fzf
 let g:fzf_colors =
  \ {'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
   \ 'hl+':     ['fg', 'Statement'],
   \ 'info':    ['fg', 'PreProc'],
@@ -110,6 +110,13 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_python_interpreter_path = ''
+let g:ycm_python_sys_path = []
+let g:ycm_extra_conf_vim_data = [
+  \  'g:ycm_python_interpreter_path',
+  \  'g:ycm_python_sys_path'
+  \]
+let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
 
 " general config
 set formatoptions=tcroql

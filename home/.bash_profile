@@ -8,8 +8,8 @@
 export GOPATH=/Users/djs/go
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 export PATH=$PATH:$GOPATH/bin
-
 # prompt
+
 COLOR_FOREGROUND="\033[0;0m"
 COLOR_CYAN="\033[0;36m"
 COLOR_RED="\033[0;31m"
@@ -152,6 +152,8 @@ alias grm="go run main.go"
 alias nn="node"
 
 # python
+alias per="pipenv run"
+alias perv="pipenv run vim"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
