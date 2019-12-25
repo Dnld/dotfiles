@@ -17,7 +17,6 @@ function git_branch {
   local git_status="$(git status 2> /dev/null)"
   local on_branch="On branch ([^${IFS}]*)"
   local on_commit="HEAD detached at ([^${IFS}]*)"
-
   if [[ $git_status =~ $on_branch ]]; then
     local branch=${BASH_REMATCH[1]}
     echo "($branch) "
@@ -26,7 +25,14 @@ function git_branch {
     echo "($commit) "
   fi
 }
-export PS1="\[$COLOR_CYAN\]\W \$(git_branch)$ \[$COLOR_FOREGROUND\]"
+function git_status() {
+  if [[ -z $(git status --porcelain 2> /dev/null) ]]; then
+    echo -e "$COLOR_CYAN"
+  else
+    echo -e "$COLOR_RED"
+  fi
+}
+export PS1="\[$COLOR_CYAN\]\W \[\$(git_status)\]\$(git_branch)\[$COLOR_CYAN\]$ \[$COLOR_FOREGROUND\]"
 
 # default editor
 export EDITOR=vim
@@ -149,9 +155,6 @@ alias nn="node"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-# ruby version manager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # sublime
 alias s="sublime"
