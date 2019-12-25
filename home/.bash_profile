@@ -1,5 +1,5 @@
 # bash profile
-# updated December 4, 2019
+# updated December 25, 2019
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -7,13 +7,27 @@
 # paths
 export GOPATH=/Users/djs/go
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
-export PATH=$PATH:/Users/djs/Library/Android/sdk/platform-tools/
-export PATH=/Users/espireinfolabs/Desktop/soft/android-sdk-mac_x86/platform-tools:$PATH
 export PATH=$PATH:$GOPATH/bin
 
 # prompt
-export PS1="\[\e[0;36m\]\W \[\e[0;36m\]$ \[\e[0m\]"
-#
+COLOR_FOREGROUND="\033[0;0m"
+COLOR_CYAN="\033[0;36m"
+COLOR_RED="\033[0;31m"
+function git_branch {
+  local git_status="$(git status 2> /dev/null)"
+  local on_branch="On branch ([^${IFS}]*)"
+  local on_commit="HEAD detached at ([^${IFS}]*)"
+
+  if [[ $git_status =~ $on_branch ]]; then
+    local branch=${BASH_REMATCH[1]}
+    echo "($branch) "
+  elif [[ $git_status =~ $on_commit ]]; then
+    local commit=${BASH_REMATCH[1]}
+    echo "($commit) "
+  fi
+}
+export PS1="\[$COLOR_CYAN\]\W \$(git_branch)$ \[$COLOR_FOREGROUND\]"
+
 # default editor
 export EDITOR=vim
 
@@ -74,10 +88,8 @@ alias vrc="vim ~/.vimrc"
 alias vtc="vim ~/.tmux.conf"
 
 # navigation
-alias db="cd ~/Dropbox\ \(Good\ Uncle\)/don"
 alias desk="cd ~/Desktop"
-alias dev="cd ~/Dropbox\ \(Good\ Uncle\)/don/development/"
-alias devg="cd ~/go/src/github.com/goodunclefood"
+alias dev="cd ~/Documents/development/"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias gpth="cd /Users/djs/go"
@@ -134,10 +146,12 @@ alias grm="go run main.go"
 alias nn="node"
 
 # python
-alias python="python3"
-alias python2="python2"
-alias venva="python -m venv env && source env/bin/activate"
-alias venvd="deactivate"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# ruby version manager
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # sublime
 alias s="sublime"
@@ -152,11 +166,18 @@ alias ttk="tmux kill-server"
 alias ttl="tmux ls"
 alias ttn="tmux new -s "
 
-# GU restarts
-alias restart-production="aws ecs update-service --force-new-deployment --cluster ecs-production --service "
-alias restart-staging="aws ecs update-service --force-new-deployment --cluster ecs-staging --service "
-
-# Android_Home Environment Variable
-export ANDROID_HOME=~/Library/Android/sdk
+# git branch in prompt, colored red if dirty
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ \1/"
+}
+function markup_git_branch() {
+ if [[ -n $@ ]]; then
+   if [[ -z $(git status --porcelain 2> /dev/null) ]]; then
+     echo -e " \[\e[0;36m\]($@)"
+   else
+     echo -e " \[\e[0;31m\]($@)"
+   fi
+ fi
+}
 
 ################################################################################

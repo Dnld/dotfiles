@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated December 6, 2019
+" Updated December 25, 2019
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -8,9 +8,6 @@ call plug#begin('~/.vim/plugged')
 " plugins
 Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
-Plug 'slashmili/alchemist.vim'
-Plug 'elixir-editors/vim-elixir'
-Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-mix-format'
@@ -94,6 +91,7 @@ let g:NERDDefaultAlign = 'left'
 " NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Vim Multiple Cursors
 let g:multi_cursor_start_word_key = '<C-m>'
