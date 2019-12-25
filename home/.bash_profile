@@ -153,6 +153,7 @@ alias nn="node"
 
 # python
 alias per="pipenv run"
+alias pers="pipenv run python manage.py runserver"
 alias perv="pipenv run vim"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -170,19 +171,5 @@ alias tte="exit"
 alias ttk="tmux kill-server"
 alias ttl="tmux ls"
 alias ttn="tmux new -s "
-
-# git branch in prompt, colored red if dirty
-function parse_git_branch() {
-    git branch 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/ \1/"
-}
-function markup_git_branch() {
- if [[ -n $@ ]]; then
-   if [[ -z $(git status --porcelain 2> /dev/null) ]]; then
-     echo -e " \[\e[0;36m\]($@)"
-   else
-     echo -e " \[\e[0;31m\]($@)"
-   fi
- fi
-}
 
 ################################################################################
