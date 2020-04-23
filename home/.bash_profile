@@ -1,15 +1,17 @@
 # bash profile
-# updated December 25, 2019
+# updated April 22, 2020
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
 
 # paths
-export GOPATH=/Users/djs/go
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+export GOPATH=/Users/djs/go
 export PATH=$PATH:$GOPATH/bin
-# prompt
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/Users/djs/.pyenv/shims/pipenv:$PATH"
 
+# prompt
 COLOR_FOREGROUND="\033[0;0m"
 COLOR_CYAN="\033[0;36m"
 COLOR_RED="\033[0;31m"
@@ -38,20 +40,15 @@ export PS1="\[$COLOR_CYAN\]\W \[\$(git_status)\]\$(git_branch)\[$COLOR_CYAN\]$ \
 export EDITOR=vim
 
 alias c="clear"
-alias c-="cd -"
 alias cd..="cd ../"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias cp="cp -iv"
 alias f="open -a Finder ./"
 alias hc="history -c"
-alias l="less"
 alias ll="ls -lahG"
 alias mk="mkdir -v"
 alias mv="mv -iv"
-alias pc="pbcopy"
-alias pp="pbpaste"
-alias r="ranger"
 alias rm="rm -iv"
 alias t="touch"
 alias v="vim"
@@ -118,32 +115,17 @@ alias gl="git log"
 alias gll="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias glll="gll --all"
 alias gmc="git commit -m"
-alias gmg="git merge"
-alias gpf="git push -f"
-alias gpfo="git push -f origin"
-alias gpfom="git push -f origin master"
-alias gpl="git pull"
 alias gpo="git push origin"
 alias gpod="git push origin development"
 alias gpom="git push origin master"
 alias gpos="git push origin staging"
-alias gpu="git push"
-alias gpuf="git push -f"
-alias gpr="git pull --rebase"
-alias gpro="git pull --rebase origin"
-alias gpru="git pull --rebase upstream"
-alias gpum="git pull upstream master"
-alias gr="git remote"
-alias grao="git remote add origin"
-alias grb="git rebase"
-alias grau="git remote add upstream"
 alias gs="git status -s"
 alias gss="git status"
 alias get="git"
 alias got="git"
 
 # open ports
-alias ports="sudo lsof -PiTCP -sTCP:LISTEN"
+alias ports="lsof -PiTCP -sTCP:LISTEN"
 
 # go
 alias grm="go run main.go"
@@ -153,7 +135,10 @@ alias nn="node"
 
 # python
 alias per="pipenv run"
-alias pers="pipenv run python manage.py runserver"
+alias perm="pipenv run python manage.py"
+alias perms="pipenv run python manage.py runserver"
+alias permsh="pipenv run python manage.py shell"
+alias perp="pipenv run python"
 alias perv="pipenv run vim"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -172,4 +157,8 @@ alias ttk="tmux kill-server"
 alias ttl="tmux ls"
 alias ttn="tmux new -s "
 
+# silence zsh warning on a Mac
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 ################################################################################
+

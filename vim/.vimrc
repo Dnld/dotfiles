@@ -1,25 +1,19 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated December 25, 2019
-" Plug begin
+" Updated April 17, 2020
 
+" Plug begin
 call plug#begin('~/.vim/plugged')
 
 " plugins
-Plug '/usr/local/opt/fzf'
 Plug 'airblade/vim-gitgutter'
-Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-mix-format'
 Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale'
 
 " Plug end
 call plug#end()
@@ -32,8 +26,8 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = '|'
-let g:airline_section_y = '%3p%%'
 let g:airline_section_z = '%3l %2v'
+let g:airline_section_y = '%3p%%'
 let g:airline_section_warning = ''
 let g:airline_section_error = ''
 let g:airline#extensions#ale#enabled = 0
@@ -42,22 +36,7 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Ale
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-let g:ale_set_highlights = 0
-let g:ale_change_sign_column_color = 0
-let g:ale_sign_error = '•'
-let g:ale_sign_warning = '•'
-let g:ale_sign_info = '•'
-let g:ale_python_executable='python3'
-let g:ale_python_pylint_use_global=1
-let g:ale_linters = {
- \   'python': ['flake8', 'pycodestyle'],
- \}
-
-" Autosave settings
+" Autosave
 let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_in_insert_mode = 0
@@ -65,26 +44,22 @@ let g:auto_save_in_insert_mode = 0
 " fzf
 set rtp+=/usr/local/opt/fzf
 let g:fzf_colors =
- \ {'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment']}
+\ {'fg':      ['fg', 'Normal'],
+\ 'bg':      ['bg', 'Normal'],
+\ 'hl':      ['fg', 'Comment'],
+\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+\ 'hl+':     ['fg', 'Statement'],
+\ 'info':    ['fg', 'PreProc'],
+\ 'border':  ['fg', 'Ignore'],
+\ 'prompt':  ['fg', 'Conditional'],
+\ 'pointer': ['fg', 'Exception'],
+\ 'marker':  ['fg', 'Keyword'],
+\ 'spinner': ['fg', 'Label'],
+\ 'header':  ['fg', 'Comment']}
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
- \| autocmd BufLeave <buffer> set laststatus=2 noshowmode noruler
-
-" mix format
-let g:mix_format_on_save = 1
-let g:mix_format_silent_errors = 1
+\| autocmd BufLeave <buffer> set laststatus=2 noshowmode noruler
 
 " NERDComToggleComment shortcut and configuration
 nnoremap ' :call NERDComment(0,"toggle")<CR>
@@ -97,28 +72,10 @@ let g:NERDDefaultAlign = 'left'
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Vim Multiple Cursors
-let g:multi_cursor_start_word_key = '<C-m>'
-let g:multi_cursor_select_all_word_key = '<A-m>'
-let g:multi_cursor_start_key           = 'g<C-m>'
-let g:multi_cursor_select_all_key      = 'g<A-m>'
-let g:multi_cursor_next_key            = '<C-m>'
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_diagnostic_highlighting = 0
-let g:ycm_python_interpreter_path = ''
-let g:ycm_python_sys_path = []
-let g:ycm_extra_conf_vim_data = [
-  \  'g:ycm_python_interpreter_path',
-  \  'g:ycm_python_sys_path'
-  \]
-let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " general config
+set nocompatible
 set formatoptions=tcroql
 set cb=unnamed
 inoremap jj <Esc>
@@ -144,17 +101,15 @@ set mouse=a
 set nobackup
 set nowritebackup
 set noswapfile
+set hidden
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 " search
 nnoremap , :noh<CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
-" bind R to r for replace mode
-nnoremap r R
-
 " reload buffers
-nnoremap <C-b> :bufdo e<CR>
+nnoremap <Leader>b :bufdo e<CR>
 
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
@@ -167,7 +122,7 @@ nnoremap <Leader>l :bd<CR>
 
 " colors, theme, font
 if (has("termguicolors"))
-  set termguicolors
+ set termguicolors
 endif
 set guifont=Source\ Code\ Pro:h13
 syntax enable
