@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 17, 2020
+" Updated April 25, 2020
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -35,6 +35,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#show_tabs = 0
 
 " Autosave
 let g:auto_save = 1
