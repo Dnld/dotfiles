@@ -12,6 +12,7 @@ Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 
@@ -74,6 +75,12 @@ let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
 
 " general config
 set nocompatible
