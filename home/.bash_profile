@@ -1,5 +1,5 @@
 # bash profile
-# updated April 22, 2020
+# updated April 28, 2020
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -135,6 +135,7 @@ alias nn="node"
 
 # python
 alias per="pipenv run"
+alias perf="per flake8 ./"
 alias perm="pipenv run python manage.py"
 alias perms="pipenv run python manage.py runserver"
 alias permsh="pipenv run python manage.py shell"
