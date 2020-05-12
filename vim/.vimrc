@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated April 25, 2020
+" Updated May 6, 2020
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 " plugins
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
@@ -41,6 +42,34 @@ let g:airline#extensions#tabline#show_tabs = 0
 let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_in_insert_mode = 0
+
+" coc
+let g:coc_global_extensions = [
+\ 'coc-css',
+\ 'coc-html',
+\ 'coc-python',
+\ ]
+set updatetime=300
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+ let col = col('.') - 1
+ return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+ if (index(['vim','help'], &filetype) >= 0)
+  execute 'h '.expand('<cword>')
+ else
+  call CocAction('doHover')
+ endif
+endfunction
 
 " fzf
 set rtp+=/usr/local/opt/fzf
@@ -109,8 +138,9 @@ set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:�
 nnoremap , :noh<CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
-" reload buffers
+" clan up buffers
 nnoremap <Leader>b :bufdo e<CR>
+nnoremap <Leader>c :bufdo bd<CR>
 
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
@@ -126,7 +156,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 set guifont=Source\ Code\ Pro:h13
-syntax off
+syntax enable
 let g:airline_theme='adaptive'
 " tweaks colors for dark snow theme
 fun Dark()

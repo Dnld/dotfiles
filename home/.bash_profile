@@ -1,5 +1,5 @@
 # bash profile
-# updated April 28, 2020
+# updated May 12, 2020
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -127,6 +127,13 @@ alias got="git"
 # open ports
 alias ports="lsof -PiTCP -sTCP:LISTEN"
 
+# docker
+alias dco="docker-compose"
+alias dcoe="docker-compose exec"
+alias dcoew="docker-compose exec web"
+alias dcoewp="docker-compose exec web python"
+alias dcoewpm="docker-compose exec web python manage.py"
+
 # go
 alias grm="go run main.go"
 
@@ -135,7 +142,7 @@ alias nn="node"
 
 # python
 alias per="pipenv run"
-alias perf="per flake8 ./"
+alias perf="per black . -v && per flake8 ./ -v"
 alias perm="pipenv run python manage.py"
 alias perms="pipenv run python manage.py runserver"
 alias permsh="pipenv run python manage.py shell"
@@ -162,4 +169,3 @@ alias ttn="tmux new -s "
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 ################################################################################
-
