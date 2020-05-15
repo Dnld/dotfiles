@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 6, 2020
+" Updated May 15, 2020
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -63,13 +63,19 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
- if (index(['vim','help'], &filetype) >= 0)
-  execute 'h '.expand('<cword>')
- else
-  call CocAction('doHover')
- endif
+if (index(['vim','help'], &filetype) >= 0)
+ execute 'h '.expand('<cword>')
+else
+ call CocAction('doHover')
+endif
 endfunction
+if exists('*complete_info')
+ inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+ imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 " fzf
 set rtp+=/usr/local/opt/fzf
@@ -140,7 +146,7 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " clan up buffers
 nnoremap <Leader>b :bufdo e<CR>
-nnoremap <Leader>c :bufdo bd<CR>
+nnoremap <Leader>c :bufdo bwipeout<CR>
 
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
