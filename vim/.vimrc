@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 15, 2020
+" Updated May 16, 2020
 
 " Plug begin
 call plug#begin('~/.vim/plugged')
@@ -96,6 +96,7 @@ let g:fzf_colors =
 autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
 \| autocmd BufLeave <buffer> set laststatus=2 noshowmode noruler
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 " NERDComToggleComment shortcut and configuration
 nnoremap ' :call NERDComment(0,"toggle")<CR>
