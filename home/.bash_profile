@@ -1,5 +1,5 @@
 # bash profile
-# updated May 12, 2020
+# updated May 21, 2020
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -92,7 +92,7 @@ alias vtc="vim ~/.tmux.conf"
 
 # navigation
 alias desk="cd ~/Desktop"
-alias dev="cd ~/Documents/development/"
+alias dev="cd ~/Development/"
 alias doc="cd ~/Documents"
 alias down="cd ~/Downloads"
 alias gpth="cd /Users/djs/go"
@@ -103,7 +103,6 @@ alias tasks='git grep -EI "TODO|FIXME"'
 # git
 alias ga="git add"
 alias gaa="git add -A"
-alias gad="git add ."
 alias gb="git branch"
 alias gbco="git checkout -b"
 alias gcm="git commit -m"
@@ -130,9 +129,17 @@ alias ports="lsof -PiTCP -sTCP:LISTEN"
 # docker
 alias dco="docker-compose"
 alias dcoe="docker-compose exec"
-alias dcoew="docker-compose exec web"
-alias dcoewp="docker-compose exec web python"
-alias dcoewpm="docker-compose exec web python manage.py"
+doc-remove() {
+ docker stop $(docker ps -aq)
+ docker rm $(docker ps -aq)
+}
+doc-destroy() {
+ doc-remove
+ docker network prune -f
+ docker rmi -f $(docker images --filter dangling=true -qa)
+ docker volume rm $(docker volume ls --filter dangling=true -q)
+ docker rmi -f $(docker images -qa)
+}
 
 # go
 alias grm="go run main.go"

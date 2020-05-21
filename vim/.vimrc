@@ -1,12 +1,13 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 16, 2020
+" Updated May 21, 2020
 
-" Plug begin
+" plug begin
 call plug#begin('~/.vim/plugged')
 
 " plugins
 Plug 'airblade/vim-gitgutter'
+Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nightsense/cosmic_latte'
@@ -15,13 +16,14 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
+Plug 'w0rp/ale'
 
 call plug#end()
-" Plug end
+" plug end
 
 " plugin settings
 
-" Airline
+" airline
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = '|'
@@ -38,7 +40,17 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tabs = 0
 
-" Autosave
+" ale
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_set_highlights = 0
+let g:ale_change_sign_column_color = 0
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
+let g:ale_sign_info = '•'
+
+" autosave
 let g:auto_save = 1
 let g:auto_save_silent = 1
 let g:auto_save_in_insert_mode = 0
@@ -46,8 +58,12 @@ let g:auto_save_in_insert_mode = 0
 " coc
 let g:coc_global_extensions = [
 \ 'coc-css',
+\ 'coc-go',
 \ 'coc-html',
+\ 'coc-json',
+\ 'coc-prettier',
 \ 'coc-python',
+\ 'coc-tsserver',
 \ ]
 set updatetime=300
 inoremap <silent><expr> <TAB>
@@ -105,7 +121,7 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDDefaultAlign = 'left'
 
-" NERDTree
+" nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
