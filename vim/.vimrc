@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 21, 2020
+" Updated May 23, 2020
 
 " plug begin
 call plug#begin('~/.vim/plugged')
@@ -162,7 +162,7 @@ nnoremap , :noh<CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " clan up buffers
-nnoremap <Leader>b :bufdo e<CR>
+nnoremap <Leader>b :bufdo e<CR>:syn on<CR>
 nnoremap <Leader>c :bufdo bwipeout<CR>
 
 " file navigation, window management
