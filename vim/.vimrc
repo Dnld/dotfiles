@@ -162,7 +162,7 @@ nnoremap , :noh<CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " clan up buffers
-nnoremap <Leader>b :bufdo e<CR>:syn on<CR>
+nnoremap <Leader>b :bufdo e
 nnoremap <Leader>c :bufdo bwipeout<CR>
 
 " file navigation, window management
