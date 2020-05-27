@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 26, 2020
+" Updated May 27, 2020
 
 " plug begin
 call plug#begin('~/.vim/plugged')
@@ -62,6 +62,7 @@ let g:coc_global_extensions = [
 \ 'coc-json',
 \ 'coc-prettier',
 \ 'coc-python',
+\ 'coc-rust-analyzer',
 \ 'coc-tsserver',
 \ ]
 set updatetime=300
@@ -161,8 +162,9 @@ nnoremap , :noh<CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " clan up buffers
-nnoremap <Leader>b :bufdo e<CR>:doautocmd Syntax<CR>
+nnoremap <Leader>b :bufdo e<CR>
 nnoremap <Leader>c :bufdo bwipeout<CR>
+nnoremap <Leader>s :do Syntax<CR>
 
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
