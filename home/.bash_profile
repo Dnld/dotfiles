@@ -1,5 +1,5 @@
 # bash profile
-# updated May 21, 2020
+# updated May 26, 2020
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -143,6 +143,7 @@ doc-destroy() {
 
 # go
 alias grm="go run main.go"
+alias gf="gofmt -s -w ."
 
 # node
 alias nn="node"

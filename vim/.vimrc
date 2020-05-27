@@ -1,13 +1,13 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated May 23, 2020
+" Updated May 26, 2020
 
 " plug begin
 call plug#begin('~/.vim/plugged')
 
 " plugins
 Plug 'airblade/vim-gitgutter'
-Plug 'fatih/vim-go'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nightsense/cosmic_latte'
@@ -17,7 +17,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
-
 call plug#end()
 " plug end
 
@@ -162,7 +161,7 @@ nnoremap , :noh<CR>
 nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " clan up buffers
-nnoremap <Leader>b :bufdo e
+nnoremap <Leader>b :bufdo e<CR>:doautocmd Syntax<CR>
 nnoremap <Leader>c :bufdo bwipeout<CR>
 
 " file navigation, window management
@@ -180,6 +179,7 @@ if (has("termguicolors"))
 endif
 set guifont=Source\ Code\ Pro:h13
 syntax enable
+let g:go_highlight_trailing_whitespace_error=0
 let g:airline_theme='adaptive'
 " tweaks colors for dark snow theme
 fun Dark()
