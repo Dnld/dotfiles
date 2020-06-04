@@ -42,7 +42,7 @@ let g:airline#extensions#tabline#show_tabs = 0
 " ale
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
+let g:ale_set_quickfix = 0
 let g:ale_set_highlights = 0
 let g:ale_change_sign_column_color = 0
 let g:ale_sign_error = '•'
