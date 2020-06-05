@@ -164,6 +164,7 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 " clan up buffers
 nnoremap <Leader>b :bufdo e<CR>
 nnoremap <Leader>c :bufdo bwipeout<CR>
+nnoremap <Leader>s :do Syntax<CR>
 
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
@@ -243,7 +244,7 @@ fun Light()
  highlight Visual guibg=#0075C9 guifg=#FFF8E7 gui=none
 endfun
 " default to dark snow theme
-call Light()
+call Dark()
 
 " move line or selection up, down, left, right
 vnoremap <C-j> :m '>+1<CR>gv=gv
