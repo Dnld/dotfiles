@@ -7096,9 +7096,9 @@
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/development/dotfiles/iterm</string>
+	<string>~/Development/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -7140,10 +7140,12 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>440 451 799 448 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 476 620 392 0 0 1680 1027 </string>
+	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1017 562 650 454 0 0 1680 1027 </string>
+	<string>1017 562 650 452 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 101 650 452 0 0 1680 1050 </string>
 	<key>NeverWarnAboutMeta</key>
@@ -10589,16 +10591,21 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.4</string>
-		<string>3.3.7beta3</string>
-		<string>3.3.9beta1</string>
-		<string>3.3.7beta2</string>
-		<string>3.3.8beta4</string>
+		<string>3.3.8beta3</string>
+		<string>3.3.10beta4</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.5beta2</string>
-		<string>3.3.8beta3</string>
+		<string>3.3.7beta3</string>
 		<string>3.3.8beta2</string>
+		<string>3.3.8beta4</string>
+		<string>3.3.4</string>
+		<string>3.3.9beta1</string>
+		<string>3.3.7beta2</string>
+		<string>3.3.10beta1</string>
+		<string>3.3.11beta1</string>
+		<string>3.3.10beta2</string>
 		<string>3.3.8beta1</string>
+		<string>3.3.10beta3</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -10610,7 +10617,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>876D3CF0-9739-4EE8-BBD5-DF1ABE343ED5</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>22</integer>
+	<integer>46</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>592873496.97205997</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -11369,7 +11376,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/djs/Documents/development/dotfiles/iterm</string>
+	<string>/Users/djs/Development/dotfiles/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -11389,9 +11396,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-15T11:25:52Z</date>
+	<date>2020-06-04T11:19:28Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>903561536</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -12472,7 +12481,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.9beta1</string>
+	<string>3.3.11beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

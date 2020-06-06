@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated June 4, 2020
+" Updated June 6, 2020
 
 " plug begin
 call plug#begin('~/.vim/plugged')
@@ -164,7 +164,6 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 " clan up buffers
 nnoremap <Leader>b :bufdo e<CR>
 nnoremap <Leader>c :bufdo bwipeout<CR>
-nnoremap <Leader>s :do Syntax<CR>
 
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
@@ -181,8 +180,8 @@ if (has("termguicolors"))
 endif
 set guifont=Source\ Code\ Pro:h13
 syntax off
-let g:go_highlight_trailing_whitespace_error=0
 let g:airline_theme='adaptive'
+let g:go_highlight_trailing_whitespace_error=0
 " tweaks colors for dark snow theme
 fun Dark()
  colorscheme snow
@@ -244,7 +243,7 @@ fun Light()
  highlight Visual guibg=#0075C9 guifg=#FFF8E7 gui=none
 endfun
 " default to dark snow theme
-call Dark()
+call Light()
 
 " move line or selection up, down, left, right
 vnoremap <C-j> :m '>+1<CR>gv=gv
