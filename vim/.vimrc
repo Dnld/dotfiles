@@ -165,6 +165,7 @@ nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 " clan up buffers
 nnoremap <Leader>b :bufdo e<CR>
 nnoremap <Leader>c :bufdo bwipeout<CR>
+nnoremap <Leader>s :do Syntax<CR>
 
 " file navigation, window management
 nnoremap <Leader>1 :NERDTreeToggle<CR>
