@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated June 6, 2020
+" Updated June 20, 2020
 
 " plug begin
 call plug#begin('~/.vim/plugged')
@@ -14,6 +14,7 @@ Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
@@ -179,7 +180,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 set guifont=Source\ Code\ Pro:h13
-syntax off
+syntax on
 let g:airline_theme='adaptive'
 let g:go_highlight_trailing_whitespace_error=0
 " tweaks colors for dark snow theme
