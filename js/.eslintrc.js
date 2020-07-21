@@ -18,6 +18,7 @@ module.exports = {
     'no-invalid-this': 0,
     indent: 0,
     'max-len': [1, 88],
+    'no-empty': 1,
     'no-unused-vars': 'warn',
     'operator-linebreak': 0,
     'object-curly-spacing': [1, 'always'],
