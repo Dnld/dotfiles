@@ -1,12 +1,13 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated June 20, 2020
+" Updated September 24, 2020
 
 " plug begin
 call plug#begin('~/.vim/plugged')
 
 " plugins
 Plug 'airblade/vim-gitgutter'
+Plug 'fatih/vim-go'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -18,8 +19,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
-call plug#end()
+
 " plug end
+call plug#end()
 
 " plugin settings
 
@@ -63,7 +65,6 @@ let g:coc_global_extensions = [
 \ 'coc-json',
 \ 'coc-prettier',
 \ 'coc-python',
-\ 'coc-rust-analyzer',
 \ 'coc-tsserver',
 \ ]
 set updatetime=300
@@ -247,7 +248,7 @@ endfun
 " default to dark snow theme
 call Light()
 
-" move line or selection up, down, left, right
+" move selection up, down, left, right
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 vnoremap <C-h> <gv
