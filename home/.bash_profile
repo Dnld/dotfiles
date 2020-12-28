@@ -1,5 +1,5 @@
 # bash profile
-# updated May 26, 2020
+# updated December 28, 2020
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -126,21 +126,6 @@ alias got="git"
 # open ports
 alias ports="lsof -PiTCP -sTCP:LISTEN"
 
-# docker
-alias dco="docker-compose"
-alias dcoe="docker-compose exec"
-doc-remove() {
- docker stop $(docker ps -aq)
- docker rm $(docker ps -aq)
-}
-doc-destroy() {
- doc-remove
- docker network prune -f
- docker rmi -f $(docker images --filter dangling=true -qa)
- docker volume rm $(docker volume ls --filter dangling=true -q)
- docker rmi -f $(docker images -qa)
-}
-
 # go
 alias grm="go run main.go"
 alias gf="gofmt -s -w ."
@@ -151,9 +136,6 @@ alias nn="node"
 # python
 alias per="pipenv run"
 alias perf="per black . -v && per flake8 ./ -v"
-alias perm="pipenv run python manage.py"
-alias perms="pipenv run python manage.py runserver"
-alias permsh="pipenv run python manage.py shell"
 alias perp="pipenv run python"
 alias perv="pipenv run vim"
 if command -v pyenv 1>/dev/null 2>&1; then
