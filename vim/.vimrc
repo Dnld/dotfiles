@@ -1,6 +1,6 @@
 " Donald Steinert .vimrc
 " https://github.com/Dnld/dotfiles
-" Updated September 24, 2020
+" Updated April 29, 2021
 
 " plug begin
 call plug#begin('~/.vim/plugged')
@@ -13,6 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nightsense/cosmic_latte'
 Plug 'nightsense/snow'
+Plug 'reedes/vim-pencil'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -246,7 +247,7 @@ fun Light()
  highlight Visual guibg=#0075C9 guifg=#FFF8E7 gui=none
 endfun
 " default to dark snow theme
-call Light()
+call Dark()
 
 " move selection up, down, left, right
 vnoremap <C-j> :m '>+1<CR>gv=gv

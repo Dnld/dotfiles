@@ -1,5 +1,5 @@
 # bash profile
-# updated December 28, 2020
+# updated April 29, 2021
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
