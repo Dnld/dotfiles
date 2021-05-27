@@ -1,5 +1,5 @@
 # bash profile
-# updated April 29, 2021
+# updated May 26, 2021
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -9,7 +9,8 @@ export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 export GOPATH=/Users/djs/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/Users/djs/.pyenv/shims/pipenv:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 # prompt
 COLOR_FOREGROUND="\033[0;0m"
@@ -139,7 +140,7 @@ alias perf="per black . -v && per flake8 ./ -v"
 alias perp="pipenv run python"
 alias perv="pipenv run vim"
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
 fi
 
 # sublime
