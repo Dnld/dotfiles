@@ -1,5 +1,5 @@
 # bash profile
-# updated May 26, 2021
+# updated June 2, 2021
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -11,6 +11,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # prompt
 COLOR_FOREGROUND="\033[0;0m"
@@ -144,8 +145,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # sublime
-alias s="sublime"
-alias s.="sublime ."
+alias s="subl"
+alias s.="subl ."
 
 # tmux
 alias tt="tmux"
