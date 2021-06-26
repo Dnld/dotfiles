@@ -1,5 +1,5 @@
 # bash profile
-# updated June 2, 2021
+# updated June 26, 2021
 # https://github.com/Dnld/dotfiles/
 
 ################################################################################
@@ -51,6 +51,7 @@ alias hc="history -c"
 alias ll="ls -lahG"
 alias mk="mkdir -v"
 alias mv="mv -iv"
+alias r="ranger"
 alias rm="rm -iv"
 alias t="touch"
 alias v="vim"
